@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bonzo Sim Racing</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 </head>
 <body class="bg-black text-white">
 
@@ -12,8 +24,8 @@
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-<img src="Logo.JPG" class="h-16 md:h-20 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
-  <span class="text-xl font-bold text-cyan-400">Bonzo Sim Racing</span>
+  <img src="logo.png" class="h-14 md:h-16 drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]" alt="Bonzo Sim Racing">
+  <span class="text-lg md:text-2xl font-bold text-cyan-400">Bonzo Sim Racing</span>
 </div>
       <a
         href="https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20sobre%20Bonzo%20Sim%20Racing"
@@ -25,40 +37,59 @@
     </div>
   </header>
 
-  <!-- HERO -->
- <section class="relative h-[80vh] flex items-center">
+ <!-- HERO -->
+<section class="relative min-h-[58vh] md:min-h-[62vh] flex items-center overflow-hidden">
 
   <!-- IMAGEN DE FONDO -->
-  <img 
-  src="QR - A.PNG" 
-  class="absolute inset-0 w-full h-full object-cover opacity-40 blur-[2px]">
+  <img
+    src="QR - A.PNG"
+    class="absolute inset-0 w-full h-full object-cover opacity-50 blur-[1px] scale-105"
+    alt="Hero Bonzo Sim Racing"
+  >
 
-   <!-- 👇 NUEVO (EFECTO FANATEC) -->
- <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+  <!-- CAPAS -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent"></div>
+  <div class="absolute inset-0 bg-black/25"></div>
 
-  <!-- OVERLAY -->
-  <div class="absolute inset-0 bg-black/30"></div>
+  <!-- DETALLE DE LUZ -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(34,211,238,0.10),transparent_30%),radial-gradient(circle_at_70%_60%,rgba(34,211,238,0.08),transparent_28%)]"></div>
 
   <!-- CONTENIDO -->
-  <div class="relative max-w-6xl mx-auto px-6">
-    <h1 class="text-5xl md:text-7xl font-bold text-cyan-400 leading-tight">
-      Bonzo Sim Racing
-    </h1>
+  <div class="relative max-w-6xl mx-auto px-6 w-full">
+    <div class="max-w-2xl animate-[fadeUp_0.9s_ease-out_forwards] opacity-0">
+      
+      <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-xs md:text-sm font-medium text-cyan-300 mb-5">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
+        Sim Racing Premium
+      </div>
 
-    <p class="mt-6 text-xl text-zinc-300 max-w-2xl">
-      Equipamiento premium y simuladores profesionales.
-      Armá tu setup ideal.
-    </p>
+      <h1 class="text-4xl md:text-6xl font-bold text-cyan-400 leading-tight drop-shadow-[0_0_18px_rgba(34,211,238,0.18)]">
+        Bonzo Sim Racing
+      </h1>
 
-    <a
-      href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20simulador"
-      target="_blank"
-      class="inline-block mt-8 bg-cyan-500 text-black px-8 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition"
-    >
-      Empezar ahora
-    </a>
+      <p class="mt-5 text-base md:text-xl text-zinc-200 max-w-xl leading-7 md:leading-8">
+        Equipamiento premium, accesorios y simuladores profesionales a medida.
+        Armá tu setup ideal con estética racing y atención personalizada.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a
+          href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20simulador"
+          target="_blank"
+          class="inline-flex items-center justify-center bg-cyan-500 text-black px-7 py-3 rounded-xl text-base font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] transition"
+        >
+          Empezar ahora
+        </a>
+
+        <a
+          href="#productos"
+          class="inline-flex items-center justify-center border border-cyan-400/30 text-cyan-300 px-7 py-3 rounded-xl text-base font-semibold hover:bg-cyan-400/10 transition"
+        >
+          Ver productos
+        </a>
+      </div>
+    </div>
   </div>
-
 </section>
 
   <!-- PRODUCTOS -->
