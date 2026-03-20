@@ -1,97 +1,99 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bonzo Sim Racing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
 
-export default function BonzoSimRacing() {
-  const whatsapp = (msg) =>
-    `https://wa.me/5491163058087?text=${encodeURIComponent(msg)}`;
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h1 class="text-5xl font-bold text-cyan-400">Bonzo Sim Racing</h1>
+    <p class="mt-4 text-lg text-zinc-300 max-w-xl">
+      Equipamiento premium y simuladores de carrera a medida.
+      Llevá tu experiencia al siguiente nivel.
+    </p>
 
-  const products = [
-    {
-      name: "Simagic GT Neo",
-      desc: "Volante GT premium con iluminación RGB y controles profesionales.",
-    },
-    {
-      name: "Simagic P1000",
-      desc: "Pedalera con load cell y ajustes avanzados para máxima precisión.",
-    },
-    {
-      name: "Bases Direct Drive",
-      desc: "Fuerza, realismo y respuesta inmediata para una experiencia pro.",
-    },
-  ];
+    <a
+      href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20simulador"
+      target="_blank"
+      class="inline-block mt-8 bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+    >
+      Hablar por WhatsApp
+    </a>
+  </section>
 
-  return (
-    <div className="bg-black text-white min-h-screen">
-      {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h1 className="text-5xl font-bold text-cyan-400">
-          Bonzo Sim Racing
-        </h1>
-        <p className="mt-4 text-lg text-zinc-300 max-w-xl">
-          Equipamiento premium y simuladores de carrera a medida.
-          Llevá tu experiencia al siguiente nivel.
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-8">Productos destacados</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-zinc-900 p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)] transition">
+        <h3 class="text-xl font-semibold">Simagic GT Neo</h3>
+        <p class="text-sm text-zinc-400 mt-2">
+          Volante GT premium con iluminación RGB y controles profesionales.
         </p>
-
         <a
-          href={whatsapp("Hola! Quiero armar mi simulador")}
+          href="https://wa.me/5491163058087?text=Hola!%20Me%20interesa%20el%20Simagic%20GT%20Neo"
           target="_blank"
-          className="inline-block mt-8 bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+          class="block mt-5 bg-cyan-500 text-black text-center py-2 rounded-lg font-medium hover:scale-[1.02] transition"
         >
-          Hablar por WhatsApp
+          Consultar
         </a>
-      </section>
+      </div>
 
-      {/* PRODUCTOS */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold mb-8">Productos destacados</h2>
+      <div class="bg-zinc-900 p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)] transition">
+        <h3 class="text-xl font-semibold">Simagic P1000</h3>
+        <p class="text-sm text-zinc-400 mt-2">
+          Pedalera con load cell y ajustes avanzados para máxima precisión.
+        </p>
+        <a
+          href="https://wa.me/5491163058087?text=Hola!%20Me%20interesa%20la%20Simagic%20P1000"
+          target="_blank"
+          class="block mt-5 bg-cyan-500 text-black text-center py-2 rounded-lg font-medium hover:scale-[1.02] transition"
+        >
+          Consultar
+        </a>
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {products.map((p) => (
-            <div
-              key={p.name}
-              className="bg-zinc-900 p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)] transition"
-            >
-              <h3 className="text-xl font-semibold">{p.name}</h3>
-              <p className="text-sm text-zinc-400 mt-2">{p.desc}</p>
-
-              <a
-                href={whatsapp(`Hola! Me interesa el ${p.name}`)}
-                target="_blank"
-                className="block mt-5 bg-cyan-500 text-black text-center py-2 rounded-lg font-medium hover:scale-[1.02] transition"
-              >
-                Consultar
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SIMULADORES */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold mb-6">
-          Simuladores completos a medida
-        </h2>
-
-        <div className="bg-gradient-to-r from-cyan-500/10 to-transparent p-8 rounded-2xl border border-cyan-400/20">
-          <p className="text-zinc-300 max-w-2xl">
-            Diseñamos simuladores personalizados según tu espacio, presupuesto
-            y nivel. Desde setups básicos hasta rigs profesionales para
-            entrenamiento o uso comercial.
-          </p>
-
-          <a
-            href={whatsapp("Hola! Quiero un simulador completo")}
-            target="_blank"
-            className="inline-block mt-6 bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold"
-          >
-            Pedir cotización
-          </a>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 text-center py-6 text-sm text-zinc-500">
-        © 2026 Bonzo Sim Racing
-      </footer>
+      <div class="bg-zinc-900 p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)] transition">
+        <h3 class="text-xl font-semibold">Bases Direct Drive</h3>
+        <p class="text-sm text-zinc-400 mt-2">
+          Fuerza, realismo y respuesta inmediata para una experiencia pro.
+        </p>
+        <a
+          href="https://wa.me/5491163058087?text=Hola!%20Me%20interesan%20las%20Bases%20Direct%20Drive"
+          target="_blank"
+          class="block mt-5 bg-cyan-500 text-black text-center py-2 rounded-lg font-medium hover:scale-[1.02] transition"
+        >
+          Consultar
+        </a>
+      </div>
     </div>
-  );
-}
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-6">Simuladores completos a medida</h2>
+
+    <div class="bg-gradient-to-r from-cyan-500/10 to-transparent p-8 rounded-2xl border border-cyan-400/20">
+      <p class="text-zinc-300 max-w-2xl">
+        Diseñamos simuladores personalizados según tu espacio, presupuesto y nivel.
+        Desde setups básicos hasta rigs profesionales para entrenamiento o uso comercial.
+      </p>
+
+      <a
+        href="https://wa.me/5491163058087?text=Hola!%20Quiero%20un%20simulador%20completo"
+        target="_blank"
+        class="inline-block mt-6 bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold"
+      >
+        Pedir cotización
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 text-center py-6 text-sm text-zinc-500">
+    © 2026 Bonzo Sim Racing
+  </footer>
+
+</body>
+</html>
