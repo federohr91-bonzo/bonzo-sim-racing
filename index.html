@@ -166,28 +166,8 @@ style="font-family: 'Orbitron', sans-serif;">
   onclick="openModal('alphaevo')"
 />
       <div class="p-5">
-        <h3 class="text-xl font-semibold">Simagic Alpha Evo</h3>
+        <h3 class="text-xl font-semibold">Simagic Alpha Evo Series</h3>
         <a href="https://wa.me/5491163058087?text=Consulta%20Alpha%20Evo" target="_blank"
-        class="block mt-4 bg-cyan-500 text-black text-center py-2 rounded-lg">Consultar</a>
-      </div>
-    </div>
-
-    <!-- SHIFTER -->
-    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
-      <img src="Q1 Secuential Shifter.PNG" class="w-full h-56 object-cover">
-      <div class="p-5">
-        <h3 class="text-xl font-semibold">Q1 Sequential Shifter</h3>
-        <a href="https://wa.me/5491163058087?text=Consulta%20Shifter" target="_blank"
-        class="block mt-4 bg-cyan-500 text-black text-center py-2 rounded-lg">Consultar</a>
-      </div>
-    </div>
-
-    <!-- HANDBRAKE -->
-    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
-      <img src="TB-1 Handbrake.PNG" class="w-full h-56 object-cover">
-      <div class="p-5">
-        <h3 class="text-xl font-semibold">TB-1 Handbrake</h3>
-        <a href="https://wa.me/5491163058087?text=Consulta%20Handbrake" target="_blank"
         class="block mt-4 bg-cyan-500 text-black text-center py-2 rounded-lg">Consultar</a>
       </div>
     </div>
@@ -202,19 +182,48 @@ style="font-family: 'Orbitron', sans-serif;">
       </div>
     </div>
 
+<div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
+  <img
+    src="Q1 Secuential Shifter.PNG"
+    alt="Shifters and Handbrakes"
+    class="w-full h-56 object-cover cursor-pointer"
+    onclick="openModal('shifters')"
+  />
+  <div class="p-5">
+    <h3 class="text-xl font-semibold">Shifters & Handbrakes</h3>
+    <a href="https://wa.me/5491163058087?text=Consulta%20Shifters%20y%20Handbrakes"
+    target="_blank"
+    class="block mt-4 bg-cyan-500 text-black text-center py-2 rounded-lg">
+      Consultar
+    </a>
+  </div>
+  </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-14">
+  <h2 class="text-4xl font-bold mb-10">Accesorios</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
     <!-- MAGLINK -->
     <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
-      <img src="Maglink.PNG" class="w-full h-56 object-cover">
+      <img
+        src="Maglink.PNG"
+        class="w-full h-56 object-cover cursor-pointer"
+        onclick="openModal('maglink')"
+      />
       <div class="p-5">
         <h3 class="text-xl font-semibold">Maglink</h3>
-        <a href="https://wa.me/5491163058087?text=Consulta%20Maglink" target="_blank"
-        class="block mt-4 bg-cyan-500 text-black text-center py-2 rounded-lg">Consultar</a>
+        <a href="https://wa.me/5491163058087?text=Consulta%20Maglink"
+        target="_blank"
+        class="block mt-4 bg-cyan-500 text-black text-center py-2 rounded-lg">
+          Consultar
+        </a>
       </div>
     </div>
 
   </div>
-  </section>
-
+</section>
   <!-- SIMULADORES -->
   <section class="max-w-6xl mx-auto px-6 py-14">
     <h2 class="text-4xl font-bold mb-8">Simuladores completos a medida</h2>
@@ -373,8 +382,8 @@ style="font-family: 'Orbitron', sans-serif;">
       ]
     },
     alphaevo: {
-      badge: "Base Direct Drive",
-      title: "Simagic Alpha Evo",
+  badge: "Base Direct Drive",
+  title: "Simagic Alpha Evo Series",
       description: "Base Direct Drive con gran fuerza, precisión y respuesta. Ideal para quienes buscan un setup más serio y una experiencia de manejo premium.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
       images: [
@@ -394,7 +403,25 @@ style="font-family: 'Orbitron', sans-serif;">
       ]
     }
   };
-
+shifters: {
+  badge: "Accesorios",
+  title: "Shifters & Handbrakes",
+  description: "Secuenciales y frenos de mano de alta precisión para completar tu setup. Sensación realista y construcción premium.",
+  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Shifters%20y%20Handbrakes",
+  images: [
+    "Q1 Secuential Shifter.PNG",
+    "TB-1 Handbrake.PNG"
+  ]
+}
+  maglink: {
+  badge: "Accesorio",
+  title: "Simagic Maglink",
+  description: "Sistema de conexión rápida para volantes, ideal para setups modulares y profesionales.",
+  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Maglink",
+  images: [
+    "Maglink.PNG"
+  ]
+}
   function openModal(productKey) {
     const product = productsData[productKey];
     if (!product) return;
