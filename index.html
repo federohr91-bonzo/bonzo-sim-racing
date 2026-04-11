@@ -119,7 +119,12 @@ style="font-family: 'Orbitron', sans-serif;">
 
     <!-- FX PRO -->
     <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
-      <img src="Fx PRO.PNG" class="w-full h-56 object-cover">
+      <img
+  src="Fx PRO.PNG"
+  alt="Simagic FX Pro"
+  class="w-full h-56 object-cover cursor-pointer"
+  onclick="openModal('fxpro')"
+/>
       <div class="p-5">
         <h3 class="text-xl font-semibold">Simagic FX Pro</h3>
         <a href="https://wa.me/5491163058087?text=Consulta%20FX%20Pro" target="_blank"
@@ -154,7 +159,12 @@ style="font-family: 'Orbitron', sans-serif;">
 
     <!-- BASE -->
     <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
-      <img src="Alpha Evo sport 6.PNG" class="w-full h-56 object-cover">
+      <img
+  src="Alpha Evo sport 6.PNG"
+  alt="Simagic Alpha Evo"
+  class="w-full h-56 object-cover cursor-pointer"
+  onclick="openModal('alphaevo')"
+/>
       <div class="p-5">
         <h3 class="text-xl font-semibold">Simagic Alpha Evo</h3>
         <a href="https://wa.me/5491163058087?text=Consulta%20Alpha%20Evo" target="_blank"
@@ -309,27 +319,29 @@ style="font-family: 'Orbitron', sans-serif;">
 
     <div class="grid md:grid-cols-2 gap-0">
       <div class="p-4 md:p-6 border-b md:border-b-0 md:border-r border-white/10">
-        <img
-          id="modalMainImage"
-          src=""
-          alt=""
-          class="w-full h-[320px] md:h-[420px] object-cover rounded-xl"
-        >
+    <img
+  id="modalMainImage"
+  src=""
+  alt=""
+  class="w-full h-[320px] md:h-[420px] object-cover rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.35)] transition duration-300"
+/>
 
         <div id="modalThumbs" class="mt-4 grid grid-cols-4 gap-3"></div>
       </div>
 
       <div class="p-6 md:p-8 flex flex-col">
         <p id="modalBadge" class="text-cyan-400 text-sm font-semibold uppercase tracking-wider"></p>
-        <h3 id="modalTitle" class="mt-2 text-3xl font-bold text-white"></h3>
+        <h3 id="modalTitle" class="mt-2 text-3xl md:text-4xl font-bold text-white tracking-wide"></h3>
         <p id="modalDescription" class="mt-4 text-zinc-300 leading-7"></p>
 
-        <a
-          id="modalWhatsapp"
-          href="#"
-          target="_blank"
-          class="inline-flex mt-8 w-fit items-center justify-center bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
-        >
+     <a
+  id="modalWhatsapp"
+  href="#"
+  target="_blank"
+  class="inline-flex mt-8 w-fit items-center justify-center bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] transition"
+>
+  Consultar por WhatsApp
+</a>
           Consultar por WhatsApp
         </a>
       </div>
@@ -361,7 +373,28 @@ style="font-family: 'Orbitron', sans-serif;">
       ]
     }
   };
-
+,
+    alphaevo: {
+      badge: "Base Direct Drive",
+      title: "Simagic Alpha Evo",
+      description: "Base Direct Drive con gran fuerza, precisión y respuesta. Ideal para quienes buscan un setup más serio y una experiencia de manejo premium.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
+      images: [
+        "Alpha Evo sport 6.PNG",
+        "evo.jpeg",
+        "evosport.jpeg"
+      ]
+    },
+    fxpro: {
+      badge: "Volante",
+      title: "Simagic FX Pro",
+      description: "Volante premium tipo fórmula con pantalla integrada, excelente terminación y look profesional para un setup de alto nivel.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20FX%20Pro",
+      images: [
+        "Fx PRO.PNG",
+        "fxpro.jpeg"
+      ]
+    }
   function openModal(productKey) {
     const product = productsData[productKey];
     if (!product) return;
@@ -380,8 +413,8 @@ style="font-family: 'Orbitron', sans-serif;">
 
     product.images.forEach((img) => {
       const button = document.createElement("button");
-      button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 transition";
-      button.innerHTML = `<img src="${img}" alt="${product.title}" class="w-full h-20 object-cover">`;
+   button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
+button.innerHTML = `<img src="${img}" alt="${product.title}" class="w-full h-20 object-cover">`;
       button.onclick = () => {
         mainImage.src = img;
       };
