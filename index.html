@@ -363,64 +363,47 @@ style="font-family: 'Orbitron', sans-serif;">
     gtneo: {
       badge: "Volante",
       title: "Simagic GT Neo",
-      description: "Volante GT premium con excelente ergonomía, terminación racing y controles profesionales. Ideal para un setup de alto nivel con imagen premium y gran sensación de manejo.",
+      description: "Volante GT premium...",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20GT%20Neo",
-      images: [
-        "Gt Neo.PNG",
-        "gtneo1.jpeg",
-        "gtneo2.jpeg"
-      ]
+      images: ["Gt Neo.PNG","gtneo1.jpeg","gtneo2.jpeg"]
     },
     p1000: {
       badge: "Pedalera",
       title: "Simagic P1000",
-      description: "Pedalera con load cell, gran precisión y posibilidad de ajuste fino. Una opción ideal para quienes buscan una experiencia más realista y consistente en frenada.",
+      description: "Pedalera con load cell...",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P1000",
-      images: [
-        "P-1000.PNG",
-        "p1000.jpeg"
-      ]
+      images: ["P-1000.PNG","p1000.jpeg"]
     },
     alphaevo: {
-  badge: "Base Direct Drive",
-  title: "Simagic Alpha Evo Series",
-      description: "Base Direct Drive con gran fuerza, precisión y respuesta. Ideal para quienes buscan un setup más serio y una experiencia de manejo premium.",
+      badge: "Base Direct Drive",
+      title: "Simagic Alpha Evo Series",
+      description: "Base Direct Drive...",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
-      images: [
-        "Alpha Evo sport 6.PNG",
-        "evo.jpeg",
-        "evosport.jpeg"
-      ]
+      images: ["Alpha Evo sport 6.PNG","evo.jpeg","evosport.jpeg"]
     },
     fxpro: {
       badge: "Volante",
       title: "Simagic FX Pro",
-      description: "Volante premium tipo fórmula con pantalla integrada, excelente terminación y look profesional para un setup de alto nivel.",
+      description: "Volante premium...",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20FX%20Pro",
-      images: [
-        "Fx PRO.PNG",
-        "fxpro.jpeg"
-      ]
+      images: ["Fx PRO.PNG","fxpro.jpeg"]
+    },
+    shifters: {
+      badge: "Accesorios",
+      title: "Shifters & Handbrakes",
+      description: "Secuenciales y frenos de mano...",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Shifters%20y%20Handbrakes",
+      images: ["Q1 Secuential Shifter.PNG","TB-1 Handbrake.PNG"]
+    },
+    maglink: {
+      badge: "Accesorio",
+      title: "Simagic Maglink",
+      description: "Sistema de conexión rápida...",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Maglink",
+      images: ["Maglink.PNG"]
     }
-shifters: {
-  badge: "Accesorios",
-  title: "Shifters & Handbrakes",
-  description: "Secuenciales y frenos de mano de alta precisión para completar tu setup. Sensación realista y construcción premium.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Shifters%20y%20Handbrakes",
-  images: [
-    "Q1 Secuential Shifter.PNG",
-    "TB-1 Handbrake.PNG"
-  ]
-},
-  maglink: {
-  badge: "Accesorio",
-  title: "Simagic Maglink",
-  description: "Sistema de conexión rápida para volantes, ideal para setups modulares y profesionales.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Maglink",
-  images: [
-    "Maglink.PNG"
-  ]
-},
+  };
+
   function openModal(productKey) {
     const product = productsData[productKey];
     if (!product) return;
@@ -432,7 +415,6 @@ shifters: {
 
     const mainImage = document.getElementById("modalMainImage");
     mainImage.src = product.images[0];
-    mainImage.alt = product.title;
 
     const thumbs = document.getElementById("modalThumbs");
     thumbs.innerHTML = "";
@@ -440,29 +422,17 @@ shifters: {
     product.images.forEach((img) => {
       const button = document.createElement("button");
       button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
-      button.innerHTML = `<img src="${img}" alt="${product.title}" class="w-full h-20 object-cover">`;
-      button.onclick = () => {
-        mainImage.src = img;
-      };
+      button.innerHTML = `<img src="${img}" class="w-full h-20 object-cover">`;
+      button.onclick = () => mainImage.src = img;
       thumbs.appendChild(button);
     });
 
-    const modal = document.getElementById("productModal");
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
-    document.body.style.overflow = "hidden";
+    document.getElementById("productModal").classList.remove("hidden");
+    document.getElementById("productModal").classList.add("flex");
   }
 
   function closeModal() {
-    const modal = document.getElementById("productModal");
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.style.overflow = "";
+    document.getElementById("productModal").classList.add("hidden");
+    document.getElementById("productModal").classList.remove("flex");
   }
-
-  document.getElementById("productModal").addEventListener("click", function(e) {
-    if (e.target === this) closeModal();
-  });
 </script>
-</body>
-</html>
