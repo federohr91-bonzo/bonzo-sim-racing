@@ -287,6 +287,113 @@ style="font-family: 'Orbitron', sans-serif;">
   <footer class="border-t border-white/10 text-center py-6 text-sm text-zinc-500">
     © 2026 Bonzo Sim Racing
   </footer>
+<!-- MODAL PRODUCTO -->
+<div id="productModal" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/80 p-4">
+  <div class="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl">
+    <button
+      onclick="closeModal()"
+      class="absolute right-4 top-4 z-20 rounded-full bg-white/10 px-3 py-1 text-white hover:bg-white/20"
+    >
+      ✕
+    </button>
 
+    <div class="grid md:grid-cols-2 gap-0">
+      <div class="p-4 md:p-6 border-b md:border-b-0 md:border-r border-white/10">
+        <img
+          id="modalMainImage"
+          src=""
+          alt=""
+          class="w-full h-[320px] md:h-[420px] object-cover rounded-xl"
+        >
+
+        <div id="modalThumbs" class="mt-4 grid grid-cols-4 gap-3"></div>
+      </div>
+
+      <div class="p-6 md:p-8 flex flex-col">
+        <p id="modalBadge" class="text-cyan-400 text-sm font-semibold uppercase tracking-wider"></p>
+        <h3 id="modalTitle" class="mt-2 text-3xl font-bold text-white"></h3>
+        <p id="modalDescription" class="mt-4 text-zinc-300 leading-7"></p>
+
+        <a
+          id="modalWhatsapp"
+          href="#"
+          target="_blank"
+          class="inline-flex mt-8 w-fit items-center justify-center bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+        >
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const productsData = {
+    gtneo: {
+      badge: "Volante",
+      title: "Simagic GT Neo",
+      description: "Volante GT premium con excelente ergonomía, terminación racing y controles profesionales. Ideal para un setup de alto nivel con imagen premium y gran sensación de manejo.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20GT%20Neo",
+      images: [
+        "Gt Neo.PNG",
+        "gtneo1.jpeg",
+        "gtneo2.jpeg"
+      ]
+    },
+    p1000: {
+      badge: "Pedalera",
+      title: "Simagic P1000",
+      description: "Pedalera con load cell, gran precisión y posibilidad de ajuste fino. Una opción ideal para quienes buscan una experiencia más realista y consistente en frenada.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P1000",
+      images: [
+        "P-1000.PNG",
+        "p1000.jpeg"
+      ]
+    }
+  };
+
+  function openModal(productKey) {
+    const product = productsData[productKey];
+    if (!product) return;
+
+    document.getElementById("modalBadge").textContent = product.badge;
+    document.getElementById("modalTitle").textContent = product.title;
+    document.getElementById("modalDescription").textContent = product.description;
+    document.getElementById("modalWhatsapp").href = product.whatsapp;
+
+    const mainImage = document.getElementById("modalMainImage");
+    mainImage.src = product.images[0];
+    mainImage.alt = product.title;
+
+    const thumbs = document.getElementById("modalThumbs");
+    thumbs.innerHTML = "";
+
+    product.images.forEach((img) => {
+      const button = document.createElement("button");
+      button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 transition";
+      button.innerHTML = `<img src="${img}" alt="${product.title}" class="w-full h-20 object-cover">`;
+      button.onclick = () => {
+        mainImage.src = img;
+      };
+      thumbs.appendChild(button);
+    });
+
+    const modal = document.getElementById("productModal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("productModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("productModal").addEventListener("click", function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
 </body>
 </html>
