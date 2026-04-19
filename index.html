@@ -716,6 +716,37 @@ style="font-family: 'Orbitron', sans-serif;">
     document.body.classList.remove("overflow-hidden");
   }
 
+  // 👉 NUEVO: CAMBIO DE MARCA
+  function showBrand(brand) {
+    const simagic = document.getElementById("simagicSection");
+    const moza = document.getElementById("mozaSection");
+
+    const btnSimagic = document.getElementById("btnSimagic");
+    const btnMoza = document.getElementById("btnMoza");
+
+    if (brand === "simagic") {
+      simagic.classList.remove("hidden");
+      moza.classList.add("hidden");
+
+      btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnSimagic.classList.remove("opacity-60");
+
+      btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnMoza.classList.add("opacity-60");
+    }
+
+    if (brand === "moza") {
+      moza.classList.remove("hidden");
+      simagic.classList.add("hidden");
+
+      btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnMoza.classList.remove("opacity-60");
+
+      btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnSimagic.classList.add("opacity-60");
+    }
+  }
+
   document.getElementById("productModal").addEventListener("click", function (e) {
     if (e.target === this) {
       closeModal();
