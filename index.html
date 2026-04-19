@@ -123,8 +123,25 @@ style="font-family: 'Orbitron', sans-serif;">
   </div>
 </section>
 
+  <div class="max-w-6xl mx-auto px-6 pt-10">
+  <div class="flex justify-center gap-6">
+
+    <!-- SIMAGIC -->
+    <button onclick="showBrand('simagic')" id="btnSimagic"
+      class="opacity-100 hover:scale-105 transition">
+      <img src="Simagicboton.png" class="h-12 md:h-14 object-contain">
+    </button>
+
+    <!-- MOZA -->
+    <button onclick="showBrand('moza')" id="btnMoza"
+      class="opacity-40 hover:opacity-100 hover:scale-105 transition">
+      <img src="Mozaboton.png" class="h-12 md:h-14 object-contain">
+    </button>
+
+  </div>
+    
   <!-- PRODUCTOS -->
-  <section id="productos" class="max-w-6xl mx-auto px-6 py-14">
+  <section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14">
   <h2 class="text-4xl font-bold mb-10">Productos</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
@@ -329,43 +346,39 @@ style="font-family: 'Orbitron', sans-serif;">
     </a>
   </div>
 </div>
+
+<!-- ACCESORIOS -->
+<div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+  <img
+    src="Maglink.PNG"
+    alt="Accesorios Simagic"
+    class="w-full h-56 object-cover cursor-pointer"
+    onclick="openModal('accesorios')"
+  />
+  <div class="p-5">
+    <h3 class="text-xl font-semibold">Accesorios Simagic</h3>
+    <p class="mt-2 text-sm text-zinc-400 leading-6">
+      Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Originales</span>
+      <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Upgrade</span>
+      <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
+    </div>
+    <a
+      href="https://wa.me/5491163058087?text=Consulta%20Accesorios%20Simagic"
+      target="_blank"
+      class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+    >
+      Consultar
+    </a>
+  </div>
+</div>
+
 </div>
 </section>
 
-<section class="max-w-6xl mx-auto px-6 py-14">
-  <h2 class="text-4xl font-bold mb-10">Accesorios</h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-    <!-- MAGLINK -->
-    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-      <img
-        src="Maglink.PNG"
-        alt="Accesorios Simagic"
-        class="w-full h-56 object-cover cursor-pointer"
-        onclick="openModal('accesorios')"
-      />
-      <div class="p-5">
-        <h3 class="text-xl font-semibold">Accesorios Simagic</h3>
-        <p class="mt-2 text-sm text-zinc-400 leading-6">
-          Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Originales</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Upgrade</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
-        </div>
-        <a
-          href="https://wa.me/5491163058087?text=Consulta%20Accesorios%20Simagic"
-          target="_blank"
-          class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-        >
-          Consultar
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- SIMULADORES -->
+<!-- SIMULADORES -->
   <section class="max-w-6xl mx-auto px-6 py-14">
     <h2 class="text-4xl font-bold mb-8">Simuladores completos a medida</h2>
 
@@ -656,4 +669,29 @@ style="font-family: 'Orbitron', sans-serif;">
       updateMainImage(product, currentImageIndex);
     }
   });
+</script>
+  <script>
+  function showBrand(brand) {
+    const simagic = document.getElementById("simagicSection");
+    const moza = document.getElementById("mozaSection");
+
+    const btnSimagic = document.getElementById("btnSimagic");
+    const btnMoza = document.getElementById("btnMoza");
+
+    if (brand === "simagic") {
+      simagic.classList.remove("hidden");
+      moza.classList.add("hidden");
+
+      btnSimagic.classList.remove("opacity-40");
+      btnMoza.classList.add("opacity-40");
+    }
+
+    if (brand === "moza") {
+      moza.classList.remove("hidden");
+      simagic.classList.add("hidden");
+
+      btnMoza.classList.remove("opacity-40");
+      btnSimagic.classList.add("opacity-40");
+    }
+  }
 </script>
