@@ -285,6 +285,7 @@ style="font-family: 'Orbitron', sans-serif;">
     <h3 class="text-xl font-semibold">Neo X Hub</h3>
     <p class="mt-2 text-sm text-zinc-400 leading-6">
       Hub modular pensado para expandir funciones y mejorar la versatilidad de tu setup.
+      Adaptable a todo tipo de aros.
     </p>
     <div class="mt-4 flex flex-wrap gap-2">
       <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Modular</span>
@@ -481,8 +482,15 @@ style="font-family: 'Orbitron', sans-serif;">
   class="w-full h-[320px] md:h-[420px] object-contain rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.35)] transition duration-300 bg-black"
 />
 
-        <div id="modalThumbs" class="mt-4 grid grid-cols-4 gap-3"></div>
-      </div>
+        <div class="mt-4 flex items-center justify-between gap-4">
+  <div id="modalThumbs" class="grid grid-cols-4 gap-3 flex-1"></div>
+  <div
+    id="modalCounter"
+    class="text-xs md:text-sm text-zinc-400 whitespace-nowrap"
+  >
+    1 / 1
+  </div>
+</div>
 
       <div class="p-6 md:p-8 flex flex-col">
         <p id="modalBadge" class="text-cyan-400 text-sm font-semibold uppercase tracking-wider"></p>
@@ -503,14 +511,14 @@ style="font-family: 'Orbitron', sans-serif;">
   </div>
 </div>
 
- <script>
+<script>
   const productsData = {
     gtneo: {
       badge: "Volante",
       title: "Simagic GT Neo",
       description: "Volante GT premium con excelente terminación, gran ergonomía y una experiencia de manejo precisa.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20GT%20Neo",
-      images: ["Gt Neo.PNG", "gtneo2.jpeg", "gtneo3.png", "gtneo4.png", "gtneo5.png", "gtneo1.jpeg", "gtneo2.jpeg"]
+      images: ["Gt Neo.PNG", "gtneo3.png", "gtneo4.png", "gtneo5.png", "gtneo1.jpeg", "gtneo2.jpeg"]
     },
     fxpro: {
       badge: "Volante",
@@ -538,7 +546,7 @@ style="font-family: 'Orbitron', sans-serif;">
       title: "Simagic Alpha Evo Series",
       description: "Bases Direct Drive con gran respuesta, fuerza y precisión para llevar tu experiencia al siguiente nivel.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
-      images: ["Alpha Evo sport 6.PNG", "alphaevo2.png", "alphaevo3.png", "alphaevo4.png", "alphaevo5.png" , "evo.jpeg", "evosport.jpeg"]
+      images: ["Alpha Evo sport 6.PNG", "alphaevo2.png", "alphaevo3.png", "alphaevo4.png", "alphaevo5.png", "evo.jpeg", "evosport.jpeg"]
     },
     neoxhub: {
       badge: "Hub",
@@ -563,39 +571,89 @@ style="font-family: 'Orbitron', sans-serif;">
     }
   };
 
+  let currentProductKey = null;
+  let currentImageIndex = 0;
+
+  function updateMainImage(product, index) {
+    const mainImage = document.getElementById("modalMainImage");
+    const counter = document.getElementById("modalCounter");
+
+    currentImageIndex = index;
+    mainImage.src = product.images[index];
+    mainImage.alt = product.title;
+
+    if (counter) {
+      counter.textContent = `${index + 1} / ${product.images.length}`;
+    }
+  }
+
   function openModal(productKey) {
     const product = productsData[productKey];
     if (!product) return;
+
+    currentProductKey = productKey;
+    currentImageIndex = 0;
 
     document.getElementById("modalBadge").textContent = product.badge;
     document.getElementById("modalTitle").textContent = product.title;
     document.getElementById("modalDescription").textContent = product.description;
     document.getElementById("modalWhatsapp").href = product.whatsapp;
 
-    const mainImage = document.getElementById("modalMainImage");
-    mainImage.src = product.images[0];
-    mainImage.alt = product.title;
+    updateMainImage(product, 0);
 
     const thumbs = document.getElementById("modalThumbs");
     thumbs.innerHTML = "";
 
-    product.images.forEach((img) => {
+    product.images.forEach((img, index) => {
       const button = document.createElement("button");
       button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
       button.innerHTML = `<img src="${img}" class="w-full h-20 object-contain bg-black" alt="${product.title}">`;
-      button.onclick = () => {
-        mainImage.src = img;
-        mainImage.alt = product.title;
-      };
+      button.onclick = () => updateMainImage(product, index);
       thumbs.appendChild(button);
     });
 
-    document.getElementById("productModal").classList.remove("hidden");
-    document.getElementById("productModal").classList.add("flex");
+    const modal = document.getElementById("productModal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
   }
 
   function closeModal() {
-    document.getElementById("productModal").classList.add("hidden");
-    document.getElementById("productModal").classList.remove("flex");
+    const modal = document.getElementById("productModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
   }
+
+  document.getElementById("productModal").addEventListener("click", function (e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    const modal = document.getElementById("productModal");
+    const isOpen = modal.classList.contains("flex");
+
+    if (!isOpen) return;
+
+    if (e.key === "Escape") {
+      closeModal();
+    }
+
+    if (currentProductKey && (e.key === "ArrowRight" || e.key === "ArrowLeft")) {
+      const product = productsData[currentProductKey];
+      if (!product) return;
+
+      if (e.key === "ArrowRight") {
+        currentImageIndex = (currentImageIndex + 1) % product.images.length;
+      }
+
+      if (e.key === "ArrowLeft") {
+        currentImageIndex = (currentImageIndex - 1 + product.images.length) % product.images.length;
+      }
+
+      updateMainImage(product, currentImageIndex);
+    }
+  });
 </script>
