@@ -142,7 +142,7 @@ style="font-family: 'Orbitron', sans-serif;">
 </div>
     
   <!-- PRODUCTOS -->
-  <section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14 transition-all duration-500 opacity-100">
+  <section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14 transition-all duration-500 opacity-100 translate-y-0">
   <h2 class="text-4xl font-bold mb-10">Simagic</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
@@ -378,7 +378,7 @@ style="font-family: 'Orbitron', sans-serif;">
 
 </div>
 </section>
-  <section id="mozaSection" class="max-w-6xl mx-auto px-6 py-14 hidden opacity-0 transition-all duration-500">
+  <section id="mozaSection" class="max-w-6xl mx-auto px-6 py-14 hidden opacity-0 translate-y-6 transition-all duration-500">
   <h2 class="text-4xl font-bold mb-10">Moza Racing</h2>
   <p class="text-zinc-400 mb-10">Performance y tecnología para llevar tu setup al siguiente nivel.</p>
 
@@ -730,45 +730,58 @@ style="font-family: 'Orbitron', sans-serif;">
   }
 
   function showBrand(brand) {
-    const simagic = document.getElementById("simagicSection");
-    const moza = document.getElementById("mozaSection");
-    const btnSimagic = document.getElementById("btnSimagic");
-    const btnMoza = document.getElementById("btnMoza");
+  const simagic = document.getElementById("simagicSection");
+  const moza = document.getElementById("mozaSection");
 
-    if (!simagic || !moza || !btnSimagic || !btnMoza) return;
+  const btnSimagic = document.getElementById("btnSimagic");
+  const btnMoza = document.getElementById("btnMoza");
 
-    if (brand === "simagic") {
-      simagic.classList.remove("hidden");
-      simagic.classList.remove("opacity-0");
-      simagic.classList.add("opacity-100");
+  if (brand === "simagic") {
+    // salida moza
+    moza.classList.add("opacity-0", "translate-y-6");
 
+    setTimeout(() => {
       moza.classList.add("hidden");
-      moza.classList.remove("opacity-100");
-      moza.classList.add("opacity-0");
 
-      btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnSimagic.classList.remove("border-white/10", "opacity-60");
+      simagic.classList.remove("hidden");
 
-      btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnMoza.classList.add("border-white/10", "opacity-60");
-    }
+      setTimeout(() => {
+        simagic.classList.remove("opacity-0", "translate-y-6");
+        simagic.classList.add("opacity-100", "translate-y-0");
+      }, 50);
+    }, 200);
 
-    if (brand === "moza") {
-      moza.classList.remove("hidden");
-      moza.classList.remove("opacity-0");
-      moza.classList.add("opacity-100");
+    // botón
+    btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnSimagic.classList.remove("opacity-60");
 
-      simagic.classList.add("hidden");
-      simagic.classList.remove("opacity-100");
-      simagic.classList.add("opacity-0");
-
-      btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnMoza.classList.remove("border-white/10", "opacity-60");
-
-      btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnSimagic.classList.add("border-white/10", "opacity-60");
-    }
+    btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnMoza.classList.add("opacity-60");
   }
+
+  if (brand === "moza") {
+    // salida simagic
+    simagic.classList.add("opacity-0", "translate-y-6");
+
+    setTimeout(() => {
+      simagic.classList.add("hidden");
+
+      moza.classList.remove("hidden");
+
+      setTimeout(() => {
+        moza.classList.remove("opacity-0", "translate-y-6");
+        moza.classList.add("opacity-100", "translate-y-0");
+      }, 50);
+    }, 200);
+
+    // botón
+    btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnMoza.classList.remove("opacity-60");
+
+    btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnSimagic.classList.add("opacity-60");
+  }
+}
 
   document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("productModal");
