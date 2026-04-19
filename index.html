@@ -142,7 +142,7 @@ style="font-family: 'Orbitron', sans-serif;">
 </div>
     
   <!-- PRODUCTOS -->
-  <section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14">
+  <section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14 transition-all duration-500 opacity-100">
   <h2 class="text-4xl font-bold mb-10">Simagic</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
@@ -378,7 +378,7 @@ style="font-family: 'Orbitron', sans-serif;">
 
 </div>
 </section>
-    <section id="mozaSection" class="max-w-6xl mx-auto px-6 py-14 hidden">
+  <section id="mozaSection" class="max-w-6xl mx-auto px-6 py-14 hidden opacity-0 transition-all duration-500">
   <h2 class="text-4xl font-bold mb-10">Moza Racing</h2>
   <p class="text-zinc-400 mb-10">Performance y tecnología para llevar tu setup al siguiente nivel.</p>
 
@@ -719,33 +719,48 @@ style="font-family: 'Orbitron', sans-serif;">
 
   // 👉 NUEVO: CAMBIO DE MARCA
   function showBrand(brand) {
-    const simagic = document.getElementById("simagicSection");
-    const moza = document.getElementById("mozaSection");
+  const simagic = document.getElementById("simagicSection");
+  const moza = document.getElementById("mozaSection");
 
-    const btnSimagic = document.getElementById("btnSimagic");
-    const btnMoza = document.getElementById("btnMoza");
+  const btnSimagic = document.getElementById("btnSimagic");
+  const btnMoza = document.getElementById("btnMoza");
 
-    if (brand === "simagic") {
-      simagic.classList.remove("hidden");
+  if (brand === "simagic") {
+    moza.classList.add("opacity-0");
+
+    setTimeout(() => {
       moza.classList.add("hidden");
+      simagic.classList.remove("hidden");
 
-      btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnSimagic.classList.remove("opacity-60");
+      setTimeout(() => {
+        simagic.classList.remove("opacity-0");
+      }, 50);
+    }, 200);
 
-      btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnMoza.classList.add("opacity-60");
-    }
+    btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnSimagic.classList.remove("opacity-60");
 
-    if (brand === "moza") {
-      moza.classList.remove("hidden");
+    btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnMoza.classList.add("opacity-60");
+  }
+
+  if (brand === "moza") {
+    simagic.classList.add("opacity-0");
+
+    setTimeout(() => {
       simagic.classList.add("hidden");
+      moza.classList.remove("hidden");
 
-      btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnMoza.classList.remove("opacity-60");
+      setTimeout(() => {
+        moza.classList.remove("opacity-0");
+      }, 50);
+    }, 200);
 
-      btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-      btnSimagic.classList.add("opacity-60");
-    }
+    btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnMoza.classList.remove("opacity-60");
+
+    btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+    btnSimagic.classList.add("opacity-60");
   }
 
   document.getElementById("productModal").addEventListener("click", function (e) {
