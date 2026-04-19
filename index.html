@@ -220,10 +220,11 @@ style="font-family: 'Orbitron', sans-serif;">
 <!-- P2000 -->
 <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
   <img
-    src="P-2000.PNG"
-    alt="Simagic P2000"
-    class="w-full h-56 object-cover"
-  />
+  src="P-2000.PNG"
+  alt="Simagic P2000"
+  class="w-full h-56 object-cover cursor-pointer"
+  onclick="openModal('p2000')"
+/>
   <div class="p-5">
     <h3 class="text-xl font-semibold">Simagic P2000</h3>
     <p class="mt-2 text-sm text-zinc-400 leading-6">
@@ -275,10 +276,11 @@ style="font-family: 'Orbitron', sans-serif;">
 <!-- HUB -->
 <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
   <img
-    src="Neo X Hub.PNG"
-    alt="Neo X Hub"
-    class="w-full h-56 object-cover"
-  />
+  src="Neo X Hub.PNG"
+  alt="Neo X Hub"
+  class="w-full h-56 object-cover cursor-pointer"
+  onclick="openModal('neoxhub')"
+/>
   <div class="p-5">
     <h3 class="text-xl font-semibold">Neo X Hub</h3>
     <p class="mt-2 text-sm text-zinc-400 leading-6">
@@ -502,50 +504,66 @@ style="font-family: 'Orbitron', sans-serif;">
 </div>
 
 <script>
+ <script>
   const productsData = {
     gtneo: {
       badge: "Volante",
       title: "Simagic GT Neo",
-      description: "Volante GT premium...",
+      description: "Volante GT premium con excelente terminación, gran ergonomía y una experiencia de manejo precisa.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20GT%20Neo",
-      images: ["Gt Neo.PNG","gtneo1.jpeg","gtneo2.jpeg"]
-    },
-    p1000: {
-      badge: "Pedalera",
-      title: "Simagic P1000",
-      description: "Pedalera con load cell...",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P1000",
-      images: ["P-1000.PNG","p1000.jpeg"]
-    },
-    alphaevo: {
-      badge: "Base Direct Drive",
-      title: "Simagic Alpha Evo Series",
-      description: "Base Direct Drive...",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
-      images: ["Alpha Evo sport 6.PNG","evo.jpeg","evosport.jpeg"]
+      images: ["Gt Neo.PNG", "gtneo1.jpeg", "gtneo2.jpeg"]
     },
     fxpro: {
       badge: "Volante",
       title: "Simagic FX Pro",
-      description: "Volante premium...",
+      description: "Volante premium orientado a fórmula, con diseño moderno, excelente grip y prestaciones avanzadas.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20FX%20Pro",
-      images: ["Fx PRO.PNG","fxpro.jpeg"]
+      images: ["Fx PRO.PNG", "fxpro.jpeg"]
+    },
+    p1000: {
+      badge: "Pedalera",
+      title: "Simagic P1000",
+      description: "Pedalera de alto rendimiento con gran precisión, ideal para mejorar frenado, consistencia y control.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P1000",
+      images: ["P-1000.PNG", "p1000.jpeg"]
+    },
+    p2000: {
+      badge: "Pedalera",
+      title: "Simagic P2000",
+      description: "Pedales hidráulicos premium para quienes buscan sensaciones más realistas y máxima performance.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P2000",
+      images: ["P-2000.PNG"]
+    },
+    alphaevo: {
+      badge: "Base Direct Drive",
+      title: "Simagic Alpha Evo Series",
+      description: "Bases Direct Drive con gran respuesta, fuerza y precisión para llevar tu experiencia al siguiente nivel.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
+      images: ["Alpha Evo sport 6.PNG", "evo.jpeg", "evosport.jpeg"]
+    },
+    neoxhub: {
+      badge: "Hub",
+      title: "Neo X Hub",
+      description: "Hub modular pensado para expandir funciones y mejorar la versatilidad de tu setup.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Neo%20X%20Hub",
+      images: ["Neo X Hub.PNG"]
     },
     shifters: {
-      badge: "Perifericos",
+      badge: "Periféricos",
       title: "Shifters & Handbrakes",
-      description: "Secuenciales y frenos de mano...",
+      description: "Periféricos ideales para sumar realismo, control y sensaciones más intensas en cada manejo.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Shifters%20y%20Handbrakes",
-      images: ["Q1 Secuential Shifter.PNG","TB-1 Handbrake.PNG"]
+      images: ["Q1 Secuential Shifter.PNG", "TB-1 Handbrake.PNG"]
     },
     accesorios: {
-  badge: "Accesorios",
-  title: "Accesorios Simagic",
-  description: "Complementos para potenciar tu setup: quick release, soportes y accesorios premium para mejorar rendimiento, ergonomía y modularidad.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20accesorios%20Simagic",
-  images: ["Maglink.PNG","QRA.jpeg","SideMount.jpeg"]
-  }
-};
+      badge: "Accesorios",
+      title: "Accesorios Simagic",
+      description: "Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20accesorios%20Simagic",
+      images: ["Maglink.PNG", "QRA.jpeg", "SideMount.jpeg"]
+    }
+  };
+
   function openModal(productKey) {
     const product = productsData[productKey];
     if (!product) return;
@@ -557,6 +575,7 @@ style="font-family: 'Orbitron', sans-serif;">
 
     const mainImage = document.getElementById("modalMainImage");
     mainImage.src = product.images[0];
+    mainImage.alt = product.title;
 
     const thumbs = document.getElementById("modalThumbs");
     thumbs.innerHTML = "";
@@ -564,8 +583,11 @@ style="font-family: 'Orbitron', sans-serif;">
     product.images.forEach((img) => {
       const button = document.createElement("button");
       button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
-      button.innerHTML = `<img src="${img}" class="w-full h-20 object-contain bg-black">`;
-      button.onclick = () => mainImage.src = img;
+      button.innerHTML = `<img src="${img}" class="w-full h-20 object-contain bg-black" alt="${product.title}">`;
+      button.onclick = () => {
+        mainImage.src = img;
+        mainImage.alt = product.title;
+      };
       thumbs.appendChild(button);
     });
 
