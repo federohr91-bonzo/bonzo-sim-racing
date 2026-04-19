@@ -645,23 +645,22 @@ style="font-family: 'Orbitron', sans-serif;">
       description: "Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.",
       whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20accesorios%20Simagic",
       images: ["Maglink.PNG", "QRA.jpeg", "SideMount.jpeg"]
+    },
+    mozar9: {
+      badge: "Base Direct Drive",
+      title: "Moza R9",
+      description: "Base Direct Drive compacta con gran rendimiento y excelente relación precio-calidad.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Moza%20R9",
+      images: ["moza-r9.png"]
+    },
+    mozaks: {
+      badge: "Volante",
+      title: "Moza KS Wheel",
+      description: "Volante GT versátil, liviano y con excelente ergonomía para distintas categorías.",
+      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS",
+      images: ["moza-ks.png"]
     }
   };
-  mozar9: {
-  badge: "Base Direct Drive",
-  title: "Moza R9",
-  description: "Base Direct Drive compacta con gran rendimiento y excelente relación precio-calidad.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Moza%20R9",
-  images: ["moza-r9.png"]
-},
-
-mozaks: {
-  badge: "Volante",
-  title: "Moza KS Wheel",
-  description: "Volante GT versátil, liviano y con excelente ergonomía para distintas categorías.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS",
-  images: ["moza-ks.png"]
-},
 
   let currentProductKey = null;
   let currentImageIndex = 0;
@@ -748,29 +747,4 @@ mozaks: {
       updateMainImage(product, currentImageIndex);
     }
   });
-</script>
-  <script>
-  function showBrand(brand) {
-    const simagic = document.getElementById("simagicSection");
-    const moza = document.getElementById("mozaSection");
-
-    const btnSimagic = document.getElementById("btnSimagic");
-    const btnMoza = document.getElementById("btnMoza");
-
-    if (brand === "simagic") {
-      simagic.classList.remove("hidden");
-      moza.classList.add("hidden");
-
-      btnSimagic.classList.remove("opacity-40");
-      btnMoza.classList.add("opacity-40");
-    }
-
-    if (brand === "moza") {
-      moza.classList.remove("hidden");
-      simagic.classList.add("hidden");
-
-      btnMoza.classList.remove("opacity-40");
-      btnSimagic.classList.add("opacity-40");
-    }
-  }
 </script>
