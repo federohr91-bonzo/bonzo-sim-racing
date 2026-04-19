@@ -670,6 +670,8 @@ style="font-family: 'Orbitron', sans-serif;">
     const mainImage = document.getElementById("modalMainImage");
     const counter = document.getElementById("modalCounter");
 
+    if (!mainImage) return;
+
     currentImageIndex = index;
     mainImage.src = product.images[index];
     mainImage.alt = product.title;
@@ -686,25 +688,33 @@ style="font-family: 'Orbitron', sans-serif;">
     currentProductKey = productKey;
     currentImageIndex = 0;
 
-    document.getElementById("modalBadge").textContent = product.badge;
-    document.getElementById("modalTitle").textContent = product.title;
-    document.getElementById("modalDescription").textContent = product.description;
-    document.getElementById("modalWhatsapp").href = product.whatsapp;
+    const modalBadge = document.getElementById("modalBadge");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalWhatsapp = document.getElementById("modalWhatsapp");
+    const thumbs = document.getElementById("modalThumbs");
+    const modal = document.getElementById("productModal");
+
+    if (!modal || !thumbs || !modalBadge || !modalTitle || !modalDescription || !modalWhatsapp) return;
+
+    modalBadge.textContent = product.badge;
+    modalTitle.textContent = product.title;
+    modalDescription.textContent = product.description;
+    modalWhatsapp.href = product.whatsapp;
 
     updateMainImage(product, 0);
 
-    const thumbs = document.getElementById("modalThumbs");
     thumbs.innerHTML = "";
 
     product.images.forEach((img, index) => {
       const button = document.createElement("button");
+      button.type = "button";
       button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
       button.innerHTML = `<img src="${img}" class="w-full h-20 object-contain bg-black" alt="${product.title}">`;
-      button.onclick = () => updateMainImage(product, index);
+      button.addEventListener("click", () => updateMainImage(product, index));
       thumbs.appendChild(button);
     });
 
-    const modal = document.getElementById("productModal");
     modal.classList.remove("hidden");
     modal.classList.add("flex");
     document.body.classList.add("overflow-hidden");
@@ -712,67 +722,73 @@ style="font-family: 'Orbitron', sans-serif;">
 
   function closeModal() {
     const modal = document.getElementById("productModal");
+    if (!modal) return;
+
     modal.classList.add("hidden");
     modal.classList.remove("flex");
     document.body.classList.remove("overflow-hidden");
   }
 
-  // 👉 NUEVO: CAMBIO DE MARCA
   function showBrand(brand) {
-  const simagic = document.getElementById("simagicSection");
-  const moza = document.getElementById("mozaSection");
+    const simagic = document.getElementById("simagicSection");
+    const moza = document.getElementById("mozaSection");
+    const btnSimagic = document.getElementById("btnSimagic");
+    const btnMoza = document.getElementById("btnMoza");
 
-  const btnSimagic = document.getElementById("btnSimagic");
-  const btnMoza = document.getElementById("btnMoza");
+    if (!simagic || !moza || !btnSimagic || !btnMoza) return;
 
-  if (brand === "simagic") {
-    moza.classList.add("opacity-0");
-
-    setTimeout(() => {
-      moza.classList.add("hidden");
+    if (brand === "simagic") {
       simagic.classList.remove("hidden");
+      simagic.classList.remove("opacity-0");
+      simagic.classList.add("opacity-100");
 
-      setTimeout(() => {
-        simagic.classList.remove("opacity-0");
-      }, 50);
-    }, 200);
+      moza.classList.add("hidden");
+      moza.classList.remove("opacity-100");
+      moza.classList.add("opacity-0");
 
-    btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnSimagic.classList.remove("opacity-60");
+      btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnSimagic.classList.remove("border-white/10", "opacity-60");
 
-    btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnMoza.classList.add("opacity-60");
-  }
-
-  if (brand === "moza") {
-    simagic.classList.add("opacity-0");
-
-    setTimeout(() => {
-      simagic.classList.add("hidden");
-      moza.classList.remove("hidden");
-
-      setTimeout(() => {
-        moza.classList.remove("opacity-0");
-      }, 50);
-    }, 200);
-
-    btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnMoza.classList.remove("opacity-60");
-
-    btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnSimagic.classList.add("opacity-60");
-  }
-
-  document.getElementById("productModal").addEventListener("click", function (e) {
-    if (e.target === this) {
-      closeModal();
+      btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnMoza.classList.add("border-white/10", "opacity-60");
     }
+
+    if (brand === "moza") {
+      moza.classList.remove("hidden");
+      moza.classList.remove("opacity-0");
+      moza.classList.add("opacity-100");
+
+      simagic.classList.add("hidden");
+      simagic.classList.remove("opacity-100");
+      simagic.classList.add("opacity-0");
+
+      btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnMoza.classList.remove("border-white/10", "opacity-60");
+
+      btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+      btnSimagic.classList.add("border-white/10", "opacity-60");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("productModal");
+
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+    }
+
+    showBrand("simagic");
   });
 
   document.addEventListener("keydown", function (e) {
     const modal = document.getElementById("productModal");
-    const isOpen = modal.classList.contains("flex");
+    if (!modal) return;
 
+    const isOpen = modal.classList.contains("flex");
     if (!isOpen) return;
 
     if (e.key === "Escape") {
