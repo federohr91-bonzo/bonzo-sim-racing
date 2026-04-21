@@ -772,16 +772,19 @@ Te ayudo a armar el setup ideal según tu nivel y presupuesto.
   <footer class="border-t border-white/10 text-center py-6 text-sm text-zinc-500">
     © 2026 Bonzo Sim Racing
   </footer>
-<!-- MODAL PRODUCTO -->
-<div id="productModal" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/80 p-4">
-  <div class="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl">
-    <button
-      onclick="closeModal()"
-      class="absolute right-4 top-4 z-20 rounded-full bg-white/10 px-3 py-1 text-white hover:bg-white/20"
-    >
-      ✕
-    </button>
 
+      <!-- MODAL PRODUCTO -->
+<div id="productModal" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+
+  <div class="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl animate-fadeUp">
+
+    <!-- BOTON VOLVER -->
+    <button 
+      onclick="closeModal()" 
+      class="absolute top-4 left-4 z-50 bg-cyan-500 text-black w-12 h-12 rounded-xl flex items-center justify-center font-bold shadow-lg"
+    >
+      ←
+    </button>
    <div class="grid md:grid-cols-2 gap-0">
   <div class="p-4 md:p-6 border-b md:border-b-0 md:border-r border-white/10">
     <img
