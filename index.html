@@ -6,7 +6,6 @@
   <title>Bonzo Sim Racing</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
@@ -25,745 +24,712 @@
       animation: fadeUp 1s ease-out forwards;
     }
   </style>
-
 </head>
 
 <body class="bg-black text-white">
-<!-- HEADER -->
-<header class="absolute top-0 left-0 w-full z-50">
-  <div class="max-w-6xl mx-auto px-6 py-2 md:py-2">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+  <!-- HEADER -->
+  <header class="absolute top-0 left-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 py-2 md:py-2">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+          <img
+            src="Logo.jpg"
+            class="h-14 md:h-16 drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]"
+            alt="Bonzo Sim Racing"
+          />
 
-      <div class="flex flex-col md:flex-row items-center gap-4">
-        <img
-          src="Logo.jpg"
-          class="h-14 md:h-16 drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]"
-          alt="Bonzo Sim Racing"
-        />
+          <div class="flex flex-col items-center md:items-start">
+            <span
+              class="text-lg md:text-2xl font-bold text-cyan-400 tracking-wider uppercase"
+              style="font-family: 'Orbitron', sans-serif;"
+            >
+              Bonzo Sim Racing
+            </span>
 
-        <div class="flex flex-col items-center md:items-start">
-          <span
-            class="text-lg md:text-2xl font-bold text-cyan-400 tracking-wider uppercase"
-            style="font-family: 'Orbitron', sans-serif;"
-          >
-            Bonzo Sim Racing
-          </span>
-
-          <p class="mt-2 text-cyan-300 text-[10px] sm:text-xs md:text-sm tracking-[0.14em] sm:tracking-[0.22em] md:tracking-[0.3em] uppercase text-center md:text-left leading-relaxed">
-            Bonzo Sim Racing Store
-          </p>
+            <p class="mt-2 text-cyan-300 text-[10px] sm:text-xs md:text-sm tracking-[0.14em] sm:tracking-[0.22em] md:tracking-[0.3em] uppercase text-center md:text-left leading-relaxed">
+              Bonzo Sim Racing Store
+            </p>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- HERO -->
-<section class="relative min-h-screen flex items-center overflow-hidden -mt-2">
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden -mt-2">
+    <img
+      id="heroFallback"
+      src="QR - A.PNG"
+      alt="Hero Bonzo Sim Racing"
+      class="absolute inset-0 w-full h-full object-cover"
+    >
 
-  <img
-    id="heroFallback"
-    src="QR - A.PNG"
-    alt="Hero Bonzo Sim Racing"
-    class="absolute inset-0 w-full h-full object-cover"
-  >
+    <video
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover hidden"
+    >
+      <source src="hero.mp4" type="video/mp4">
+    </video>
 
-  <video
-    id="heroVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute inset-0 w-full h-full object-cover hidden"
-  >
-    <source src="hero.mp4" type="video/mp4">
-  </video>
+    <div class="absolute inset-0 bg-black/65"></div>
 
-  <div class="absolute inset-0 bg-black/65"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full flex justify-center">
+      <div class="max-w-2xl text-center opacity-0 animate-fadeUp">
+        <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-xs md:text-sm font-medium text-cyan-300 mb-5">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
+          Sim Racing Premium
+        </div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-6 w-full flex justify-center">
-    <div class="max-w-2xl text-center opacity-0 animate-fadeUp">
+        <h1 class="text-4xl md:text-6xl font-bold text-cyan-400 tracking-wider uppercase"
+          style="font-family: 'Orbitron', sans-serif;">
+          Bonzo Sim Racing
+        </h1>
 
-      <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-xs md:text-sm font-medium text-cyan-300 mb-5">
-        <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
-        Sim Racing Premium
-      </div>
+        <p class="mt-3 text-cyan-300 text-[11px] sm:text-xs md:text-base tracking-[0.12em] sm:tracking-[0.24em] md:tracking-[0.35em] uppercase">
+          Bonzo Sim Racing Store
+        </p>
 
-      <h1 class="text-4xl md:text-6xl font-bold text-cyan-400 tracking-wider uppercase"
-        style="font-family: 'Orbitron', sans-serif;">
-        Bonzo Sim Racing
-      </h1>
+        <p class="mt-5 text-base md:text-xl text-zinc-200 max-w-xl leading-7 md:leading-8 mx-auto">
+          Equipamiento premium y accesorios de sim racing.
+          Te ayudo a armar el setup ideal según tu nivel y presupuesto.
+        </p>
 
-      <p class="mt-3 text-cyan-300 text-[11px] sm:text-xs md:text-base tracking-[0.12em] sm:tracking-[0.24em] md:tracking-[0.35em] uppercase">
-        Bonzo Sim Racing Store
-      </p>
-
-      <p class="mt-5 text-base md:text-xl text-zinc-200 max-w-xl leading-7 md:leading-8 mx-auto">
-        Equipamiento premium y accesorios de sim racing.
-        Te ayudo a armar el setup ideal según tu nivel y presupuesto.
-      </p>
-
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20simulador"
-          target="_blank"
-          class="bg-cyan-500 text-black px-7 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] transition"
-        >
-          Empezar ahora
-        </a>
-
-        <a
-          href="#productos"
-          class="border border-cyan-400/30 text-cyan-300 px-7 py-3 rounded-xl font-semibold hover:bg-cyan-400/10 transition"
-        >
-          Ver productos
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
- <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base text-zinc-400 py-8">
-  <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition">
-    📦 <span>Stock en Argentina</span>
-  </div>
-
-  <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition">
-    🚚 <span>Envíos a todo el país</span>
-  </div>
-
-  <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition">
-    🎯 <span>Asesoramiento personalizado</span>
-  </div>
-</section>
-
- <div id="productos" class="max-w-6xl mx-auto px-6 pt-10">
-  <div class="flex justify-center gap-8">
-
-    <!-- SIMAGIC -->
-    <button onclick="showBrand('simagic')" id="btnSimagic"
-      class="p-3 rounded-xl bg-zinc-900 border border-cyan-400/30 shadow-[0_0_25px_rgba(34,211,238,0.25)] transition hover:scale-105">
-      <img src="Simagicboton.png" class="h-12 md:h-14 object-contain">
-    </button>
-
-    <!-- MOZA -->
-    <button onclick="showBrand('moza')" id="btnMoza"
-      class="p-3 rounded-xl bg-zinc-900 border border-white/10 opacity-60 transition hover:opacity-100 hover:scale-105">
-      <img src="Mozaboton.png" class="h-12 md:h-14 object-contain">
-    </button>
-
-  </div>
-</div>
-    
-  <!-- PRODUCTOS -->
-  <div class="grid md:grid-cols-3 gap-6">
-<section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14 transition-all duration-500 opacity-100 translate-y-0">
-  <h2 class="text-4xl font-bold mb-4">Simagic</h2>
-  <p class="text-zinc-400 mb-10">Equipamiento premium para sim racing.</p>
-
-  <!-- BASES -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Bases</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="Alpha Evo sport 6.PNG"
-          alt="Simagic Alpha Evo"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('alphaevo')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic Alpha Evo Series</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Bases Direct Drive con gran respuesta, fuerza y precisión para llevar tu experiencia al siguiente nivel.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Precisión</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alto torque</span>
-          </div>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            href="https://wa.me/5491163058087?text=Consulta%20Alpha%20Evo"
+            href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20simulador"
             target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            class="bg-cyan-500 text-black px-7 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] transition"
           >
-            Consultar
+            Empezar ahora
+          </a>
+
+          <a
+            href="#productos"
+            class="border border-cyan-400/30 text-cyan-300 px-7 py-3 rounded-xl font-semibold hover:bg-cyan-400/10 transition"
+          >
+            Ver productos
           </a>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- PILLS -->
+  <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base text-zinc-400 py-8">
+    <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition">
+      📦 <span>Stock en Argentina</span>
+    </div>
+
+    <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition">
+      🚚 <span>Envíos a todo el país</span>
+    </div>
+
+    <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition">
+      🎯 <span>Asesoramiento personalizado</span>
     </div>
   </div>
 
-  <!-- VOLANTES -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Volantes</h3>
-    <div class="grid md:grid-cols-3 gap-6">
+  <!-- BOTONES MARCA -->
+  <div id="productos" class="max-w-6xl mx-auto px-6 pt-10">
+    <div class="flex justify-center gap-8">
+      <!-- SIMAGIC -->
+      <button onclick="showBrand('simagic')" id="btnSimagic"
+        class="p-3 rounded-xl bg-zinc-900 border border-cyan-400/30 shadow-[0_0_25px_rgba(34,211,238,0.25)] transition hover:scale-105">
+        <img src="Simagicboton.png" class="h-12 md:h-14 object-contain">
+      </button>
 
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="Gt Neo.PNG"
-          alt="Simagic GT Neo"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('gtneo')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic GT Neo</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Volante GT premium con excelente terminación, gran ergonomía y una experiencia de manejo precisa.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT Style</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta calidad</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20GT%20Neo"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="Fx PRO.PNG"
-          alt="Simagic FX Pro"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('fxpro')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic FX Pro</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Volante premium orientado a fórmula, con diseño moderno, excelente grip y prestaciones avanzadas.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Formula Style</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pantalla integrada</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20FX%20Pro"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
+      <!-- MOZA -->
+      <button onclick="showBrand('moza')" id="btnMoza"
+        class="p-3 rounded-xl bg-zinc-900 border border-white/10 opacity-60 transition hover:opacity-100 hover:scale-105">
+        <img src="Mozaboton.png" class="h-12 md:h-14 object-contain">
+      </button>
     </div>
   </div>
 
-  <!-- PEDALES -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Pedales</h3>
-    <div class="grid md:grid-cols-3 gap-6">
+  <!-- SIMAGIC -->
+  <section id="simagicSection" class="max-w-6xl mx-auto px-6 py-14 transition-all duration-500 opacity-100 translate-y-0">
+    <h2 class="text-4xl font-bold mb-4">Simagic</h2>
+    <p class="text-zinc-400 mb-10">Equipamiento premium para sim racing.</p>
 
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="P-1000.PNG"
-          alt="Simagic P1000"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('p1000')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic P1000</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Pedalera de alto rendimiento con gran precisión, ideal para mejorar frenado, consistencia y control.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Load Cell</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Ajustable</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Competición</span>
+    <!-- BASES -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Bases</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="Alpha Evo sport 6.PNG"
+            alt="Simagic Alpha Evo"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('alphaevo')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic Alpha Evo Series</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Bases Direct Drive con gran respuesta, fuerza y precisión para llevar tu experiencia al siguiente nivel.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Precisión</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alto torque</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20Alpha%20Evo"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
           </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20P1000"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
         </div>
       </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="P-2000.PNG"
-          alt="Simagic P2000"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('p2000')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic P2000</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Pedales hidráulicos premium para quienes buscan sensaciones más realistas y máxima performance.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Hidráulicos</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta gama</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Realismo</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20P2000"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- SHIFTERS -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Shifters</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="Q1 Secuential Shifter.PNG"
-          alt="Simagic Q1 Sequential Shifter"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('shifterq1')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic Q1 Sequential Shifter</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Shifter secuencial pensado para sumar precisión, sensación mecánica y más realismo al manejo.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Secuencial</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Realismo</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20Simagic%20Q1%20Sequential%20Shifter"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="ds8.png"
-          alt="Simagic DS-8X Shifter"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('shifterds8x')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic DS-8X Shifter</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Shifter H-pattern y secuencial en un solo equipo. Máximo realismo y versatilidad para distintas categorías.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-white text-black font-semibold">H-Pattern</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Secuencial</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20Simagic%20DS-8X%20Shifter"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- HANDBRAKE -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Handbrake</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="TB-1 Handbrake.PNG"
-          alt="Simagic TB-1 Handbrake"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('handbraketb1')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Simagic TB-1 Handbrake</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Handbrake ideal para sumar control y sensaciones más intensas en rally, drift y distintas disciplinas.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Handbrake</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Control</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20Simagic%20TB-1%20Handbrake"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ACCESORIOS -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Accesorios</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="Neo X Hub.PNG"
-          alt="Neo X Hub"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('neoxhub')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Neo X Hub</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Hub modular pensado para expandir funciones y mejorar la versatilidad de tu setup.
-            Adaptable a todo tipo de aros.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Modular</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Versátil</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20Neo%20X%20Hub"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img
-          src="Maglink.PNG"
-          alt="Accesorios Simagic"
-          class="w-full h-56 object-cover cursor-pointer"
-          onclick="openModal('accesorios')"
-        />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Accesorios Simagic</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">
-            Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Originales</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Upgrade</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
-          </div>
-          <a
-            href="https://wa.me/5491163058087?text=Consulta%20Accesorios%20Simagic"
-            target="_blank"
-            class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Consultar
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
- <section id="mozaSection" class="max-w-6xl mx-auto px-6 py-14 hidden opacity-0 translate-y-6 transition-all duration-500">
-  <h2 class="text-4xl font-bold mb-4">Moza Racing</h2>
-  <p class="text-zinc-400 mb-10">Performance y tecnología para llevar tu setup al siguiente nivel.</p>
-
-  <!-- BUNDLES -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Bundles</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="bundle-r5.png" alt="Moza R5 Bundle" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozabundler5')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza R5 Bundle</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Bundle ideal para entrar al sim racing con una solución completa, compacta y lista para usar.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Bundle</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Entry Level</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Completo</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R5%20Bundle" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="bundlefsr2r9.png" alt="Moza FSR2 + R9 Bundle" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozabundlefsr2r9')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza FSR2 + R9</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Combo premium con base Direct Drive y volante fórmula para una experiencia de alto nivel.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Bundle</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Formula</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">9 Nm</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20FSR2%20mas%20R9" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="bundleksr9.png" alt="Moza KS + R9 Bundle" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozabundleksr9')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza KS + R9</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Bundle GT muy equilibrado para quienes buscan rendimiento, ergonomía y gran relación precio-calidad.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Bundle</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">9 Nm</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20KS%20mas%20R9" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- BASES -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Bases</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-r9.png" alt="Moza R9" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozar9')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza R9</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Base Direct Drive compacta con gran rendimiento y excelente relación precio-calidad.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">9 Nm</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Compacta</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R9" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-r12.png" alt="Moza R12" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozar12')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza R12</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Base Direct Drive de gran potencia y precisión para setups más exigentes.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">12 Nm</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Performance</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R12" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-r21ultra.png" alt="Moza R21 Ultra" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozar21ultra')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza R21 Ultra</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Base de máxima potencia para quienes buscan una experiencia Direct Drive extrema.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta potencia</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R21%20Ultra" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- VOLANTES -->
-  <div class="mb-14">
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Volantes</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-ks.png" alt="Moza KS" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozaks')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza KS</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Volante GT versátil, liviano y con excelente ergonomía para distintas categorías.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT Style</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Liviano</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20KS" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="fsr2-1.png" alt="Moza FSR2" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozafsr2')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza FSR2</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Volante fórmula premium con look moderno y funciones avanzadas para máxima inmersión.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Formula</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pantalla</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20FSR2" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-gsv2p.png" alt="Moza GS V2P" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozagsv2p')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza GS V2P</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Volante GT premium con materiales de alta calidad y gran presencia visual.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT Premium</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta calidad</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20GS%20V2P" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-kspro.png" alt="Moza KS Pro" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozakspro')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza KS Pro</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Versión más avanzada para quienes buscan un volante GT competitivo y muy completo.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pro</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20KS%20Pro" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-cspro3.png" alt="Moza CS Pro" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozacspro')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza CS Pro</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Volante robusto y versátil para quienes buscan una experiencia más tradicional y potente.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Round Style</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Robusto</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pro</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20CS%20Pro" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-csv2p.png" alt="Moza CS V2P" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozacsv2p')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza CS V2P</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Volante redondo con gran terminación y enfoque en realismo para distintas disciplinas.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Round Style</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Realismo</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20CS%20V2P" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- PEDALES -->
-  <div>
-    <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Pedales</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-srp2.png" alt="Moza SRP2" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozasrp2')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza SRP2</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Pedales ideales para setups de entrada y media gama, con muy buena relación precio-rendimiento.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pedales</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Entry</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20SRP2" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-      <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
-        <img src="moza-crp2.png" alt="Moza CRP2" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozacrp2')" />
-        <div class="p-5">
-          <h3 class="text-xl font-semibold">Moza CRP2</h3>
-          <p class="mt-2 text-sm text-zinc-400 leading-6">Pedales premium para quienes buscan mayor precisión, mejor frenado y sensación más sólida.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pedales</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Performance</span>
-          </div>
-          <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20CRP2" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SIMULADORES -->
-<section class="max-w-6xl mx-auto px-6 py-14">
-
-  <div class="text-center mb-10">
-    <h2 class="text-4xl font-bold">Sim Racing real</h2>
-    <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
-      Probé distintos setups y hoy te puedo ayudar a elegir el ideal según tu presupuesto y objetivo.
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-8 items-center">
-
-    <!-- VIDEO -->
-    <div class="rounded-2xl overflow-hidden border border-white/10">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="w-full h-full object-cover"
-      >
-        <source src="setup.mp4" type="video/mp4">
-      </video>
     </div>
 
-    <!-- TEXTO -->
+    <!-- VOLANTES -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Volantes</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="Gt Neo.PNG"
+            alt="Simagic GT Neo"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('gtneo')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic GT Neo</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Volante GT premium con excelente terminación, gran ergonomía y una experiencia de manejo precisa.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT Style</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta calidad</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20GT%20Neo"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="Fx PRO.PNG"
+            alt="Simagic FX Pro"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('fxpro')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic FX Pro</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Volante premium orientado a fórmula, con diseño moderno, excelente grip y prestaciones avanzadas.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Formula Style</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pantalla integrada</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20FX%20Pro"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PEDALES -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Pedales</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="P-1000.PNG"
+            alt="Simagic P1000"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('p1000')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic P1000</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Pedalera de alto rendimiento con gran precisión, ideal para mejorar frenado, consistencia y control.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Load Cell</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Ajustable</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Competición</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20P1000"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="P-2000.PNG"
+            alt="Simagic P2000"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('p2000')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic P2000</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Pedales hidráulicos premium para quienes buscan sensaciones más realistas y máxima performance.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Hidráulicos</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta gama</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Realismo</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20P2000"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHIFTERS -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Shifters</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="Q1 Secuential Shifter.PNG"
+            alt="Simagic Q1 Sequential Shifter"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('shifterq1')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic Q1 Sequential Shifter</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Shifter secuencial pensado para sumar precisión, sensación mecánica y más realismo al manejo.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Secuencial</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Realismo</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20Simagic%20Q1%20Sequential%20Shifter"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="ds8.png"
+            alt="Simagic DS-8X Shifter"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('shifterds8x')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic DS-8X Shifter</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Shifter H-pattern y secuencial en un solo equipo. Máximo realismo y versatilidad para distintas categorías.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-white text-black font-semibold">H-Pattern</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Secuencial</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20Simagic%20DS-8X%20Shifter"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HANDBRAKE -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Handbrake</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="TB-1 Handbrake.PNG"
+            alt="Simagic TB-1 Handbrake"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('handbraketb1')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Simagic TB-1 Handbrake</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Handbrake ideal para sumar control y sensaciones más intensas en rally, drift y distintas disciplinas.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Handbrake</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Control</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20Simagic%20TB-1%20Handbrake"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCESORIOS -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Accesorios</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="Neo X Hub.PNG"
+            alt="Neo X Hub"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('neoxhub')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Neo X Hub</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Hub modular pensado para expandir funciones y mejorar la versatilidad de tu setup.
+              Adaptable a todo tipo de aros.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Modular</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Versátil</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Simagic</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20Neo%20X%20Hub"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img
+            src="Maglink.PNG"
+            alt="Accesorios Simagic"
+            class="w-full h-56 object-cover cursor-pointer"
+            onclick="openModal('accesorios')"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Accesorios Simagic</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">
+              Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Originales</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Upgrade</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
+            </div>
+            <a
+              href="https://wa.me/5491163058087?text=Consulta%20Accesorios%20Simagic"
+              target="_blank"
+              class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition"
+            >
+              Consultar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOZA -->
+  <section id="mozaSection" class="max-w-6xl mx-auto px-6 py-14 hidden opacity-0 translate-y-6 transition-all duration-500">
+    <h2 class="text-4xl font-bold mb-4">Moza Racing</h2>
+    <p class="text-zinc-400 mb-10">Performance y tecnología para llevar tu setup al siguiente nivel.</p>
+
+    <!-- BUNDLES -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Bundles</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="bundle-r5.png" alt="Moza R5 Bundle" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozabundler5')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza R5 Bundle</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Bundle ideal para entrar al sim racing con una solución completa, compacta y lista para usar.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Bundle</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Entry Level</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Completo</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R5%20Bundle" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="bundlefsr2r9.png" alt="Moza FSR2 + R9 Bundle" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozabundlefsr2r9')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza FSR2 + R9</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Combo premium con base Direct Drive y volante fórmula para una experiencia de alto nivel.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Bundle</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Formula</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">9 Nm</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20FSR2%20mas%20R9" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="bundleksr9.png" alt="Moza KS + R9 Bundle" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozabundleksr9')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza KS + R9</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Bundle GT muy equilibrado para quienes buscan rendimiento, ergonomía y gran relación precio-calidad.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Bundle</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">9 Nm</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20KS%20mas%20R9" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BASES -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Bases</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-r9.png" alt="Moza R9" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozar9')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza R9</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Base Direct Drive compacta con gran rendimiento y excelente relación precio-calidad.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">9 Nm</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Compacta</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R9" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-r12.png" alt="Moza R12" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozar12')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza R12</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Base Direct Drive de gran potencia y precisión para setups más exigentes.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">12 Nm</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Performance</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R12" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-r21ultra.png" alt="Moza R21 Ultra" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozar21ultra')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza R21 Ultra</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Base de máxima potencia para quienes buscan una experiencia Direct Drive extrema.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Direct Drive</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta potencia</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20R21%20Ultra" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLANTES -->
+    <div class="mb-14">
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Volantes</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-ks.png" alt="Moza KS" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozaks')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza KS</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Volante GT versátil, liviano y con excelente ergonomía para distintas categorías.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT Style</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Liviano</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20KS" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="fsr2-1.png" alt="Moza FSR2" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozafsr2')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza FSR2</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Volante fórmula premium con look moderno y funciones avanzadas para máxima inmersión.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Formula</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pantalla</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20FSR2" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-gsv2p.png" alt="Moza GS V2P" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozagsv2p')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza GS V2P</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Volante GT premium con materiales de alta calidad y gran presencia visual.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT Premium</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Alta calidad</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20GS%20V2P" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-kspro.png" alt="Moza KS Pro" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozakspro')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza KS Pro</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Versión más avanzada para quienes buscan un volante GT competitivo y muy completo.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">GT</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pro</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20KS%20Pro" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-cspro3.png" alt="Moza CS Pro" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozacspro')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza CS Pro</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Volante robusto y versátil para quienes buscan una experiencia más tradicional y potente.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Round Style</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Robusto</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pro</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20CS%20Pro" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-csv2p.png" alt="Moza CS V2P" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozacsv2p')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza CS V2P</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Volante redondo con gran terminación y enfoque en realismo para distintas disciplinas.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Round Style</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Realismo</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20CS%20V2P" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PEDALES -->
     <div>
+      <h3 class="text-2xl font-semibold mb-6 text-cyan-300">Pedales</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-srp2.png" alt="Moza SRP2" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozasrp2')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza SRP2</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Pedales ideales para setups de entrada y media gama, con muy buena relación precio-rendimiento.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pedales</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Entry</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Moza</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20SRP2" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
 
-      <p class="text-zinc-400 leading-7 mb-6">
-        Si estás por armar tu setup o mejorar el que ya tenés, te puedo orientar para que inviertas bien y no gastes de más.
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/40 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition duration-300">
+          <img src="moza-crp2.png" alt="Moza CRP2" class="w-full h-56 object-cover cursor-pointer" onclick="openModal('mozacrp2')" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold">Moza CRP2</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-6">Pedales premium para quienes buscan mayor precisión, mejor frenado y sensación más sólida.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Pedales</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Premium</span>
+              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">Performance</span>
+            </div>
+            <a href="https://wa.me/5491163058087?text=Consulta%20Moza%20CRP2" target="_blank" class="block mt-5 bg-cyan-500 text-black text-center py-2.5 rounded-lg font-semibold hover:scale-[1.02] transition">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIM RACING REAL -->
+  <section class="max-w-6xl mx-auto px-6 py-14">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold">Sim Racing real</h2>
+      <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
+        Probé distintos setups y hoy te puedo ayudar a elegir el ideal según tu presupuesto y objetivo.
       </p>
-
-      <p class="text-zinc-400 leading-7 mb-6">
-        Desde opciones básicas hasta setups más avanzados, según lo que estés buscando.
-      </p>
-
-      <a
-        href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20setup"
-        target="_blank"
-        class="inline-block bg-cyan-500 text-black px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
-      >
-        Consultar por setup
-      </a>
-
     </div>
 
-  </div>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="rounded-2xl overflow-hidden border border-white/10">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-full h-full object-cover"
+        >
+          <source src="setup.mp4" type="video/mp4">
+        </video>
+      </div>
 
-</section>
+      <div>
+        <p class="text-zinc-400 leading-7 mb-6">
+          Si estás por armar tu setup o mejorar el que ya tenés, te puedo orientar para que inviertas bien y no gastes de más.
+        </p>
+
+        <p class="text-zinc-400 leading-7 mb-6">
+          Desde opciones básicas hasta setups más avanzados, según lo que estés buscando.
+        </p>
+
+        <a
+          href="https://wa.me/5491163058087?text=Hola!%20Quiero%20armar%20mi%20setup"
+          target="_blank"
+          class="inline-block bg-cyan-500 text-black px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
+        >
+          Consultar por setup
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- POR QUÉ ELEGIRNOS -->
   <section class="max-w-6xl mx-auto px-6 py-14">
@@ -788,72 +754,70 @@
       </div>
     </div>
   </section>
+
+  <!-- ARMA TU SIMULADOR -->
   <section class="max-w-6xl mx-auto px-6 py-14">
-  <div class="text-center mb-10">
-    <h2 class="text-4xl font-bold">Armá tu simulador</h2>
-    <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
-      Te ayudamos a elegir el setup ideal según tu presupuesto, espacio y nivel de experiencia.
-    </p>
-  </div>
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold">Armá tu simulador</h2>
+      <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
+        Te ayudamos a elegir el setup ideal según tu presupuesto, espacio y nivel de experiencia.
+      </p>
+    </div>
+  </section>
 
-</section>
-      <section class="max-w-6xl mx-auto px-6 pb-14">
+  <section class="max-w-6xl mx-auto px-6 pb-14">
+    <div class="rounded-2xl overflow-hidden border border-white/10">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-[260px] md:h-[420px] object-cover"
+      >
+        <source src="setup2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
 
-  <div class="rounded-2xl overflow-hidden border border-white/10">
-
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      class="w-full h-[260px] md:h-[420px] object-cover"
-    >
-      <source src="setup2.mp4" type="video/mp4">
-    </video>
-
-  </div>
-
-</section>
-      <section class="max-w-6xl mx-auto px-6 py-14">
-  <div class="text-center mb-10">
-    <h2 class="text-4xl font-bold">Preguntas frecuentes</h2>
-    <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
-      Algunas dudas habituales antes de elegir tu setup.
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-6">
-
-    <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-      <h3 class="text-lg font-semibold text-cyan-300">¿Hacen envíos?</h3>
-      <p class="text-zinc-400 mt-3 leading-7">
-        Sí, realizamos envíos a todo el país.
+  <!-- FAQ -->
+  <section class="max-w-6xl mx-auto px-6 py-14">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold">Preguntas frecuentes</h2>
+      <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
+        Algunas dudas habituales antes de elegir tu setup.
       </p>
     </div>
 
-    <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-      <h3 class="text-lg font-semibold text-cyan-300">¿Me ayudan a elegir?</h3>
-      <p class="text-zinc-400 mt-3 leading-7">
-        Sí, te orientamos según tu presupuesto, experiencia y objetivo.
-      </p>
-    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
+        <h3 class="text-lg font-semibold text-cyan-300">¿Hacen envíos?</h3>
+        <p class="text-zinc-400 mt-3 leading-7">
+          Sí, realizamos envíos a todo el país.
+        </p>
+      </div>
 
-    <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-      <h3 class="text-lg font-semibold text-cyan-300">¿Trabajan con stock local?</h3>
-      <p class="text-zinc-400 mt-3 leading-7">
-        Sí, contamos con productos disponibles en Argentina.
-      </p>
-    </div>
+      <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
+        <h3 class="text-lg font-semibold text-cyan-300">¿Me ayudan a elegir?</h3>
+        <p class="text-zinc-400 mt-3 leading-7">
+          Sí, te orientamos según tu presupuesto, experiencia y objetivo.
+        </p>
+      </div>
 
-    <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-      <h3 class="text-lg font-semibold text-cyan-300">¿Puedo consultar por un setup completo?</h3>
-      <p class="text-zinc-400 mt-3 leading-7">
-        Sí, podés escribirnos y te ayudamos a definir la mejor opción para tu caso.
-      </p>
-    </div>
+      <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
+        <h3 class="text-lg font-semibold text-cyan-300">¿Trabajan con stock local?</h3>
+        <p class="text-zinc-400 mt-3 leading-7">
+          Sí, contamos con productos disponibles en Argentina.
+        </p>
+      </div>
 
-  </div>
-</section>
+      <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6">
+        <h3 class="text-lg font-semibold text-cyan-300">¿Puedo consultar por un setup completo?</h3>
+        <p class="text-zinc-400 mt-3 leading-7">
+          Sí, podés escribirnos y te ayudamos a definir la mejor opción para tu caso.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA FINAL -->
   <section class="max-w-6xl mx-auto px-6 py-14">
@@ -873,424 +837,421 @@
     </div>
   </section>
 
-<!-- BOTON FLOTANTE -->
-<a
-  href="https://wa.me/5491163058087?text=Hola!%20Quiero%20hacer%20una%20consulta"
-  target="_blank"
-  title="Escribinos por WhatsApp"
-  class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition duration-300 animate-pulse"
-  aria-label="WhatsApp"
->
-  <span class="w-5 h-5">
-    <svg viewBox="0 0 32 32" fill="currentColor" class="w-full h-full">
-      <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.4c2.3 1.3 4.9 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.5 0-4.9-.7-7-2l-.5-.3-4.9 1.4 1.3-4.8-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.3 5.9-13.2 13.2-13.2S29.2 8.7 29.2 16 23.3 28.9 16 28.9zm7.3-9.8c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.5-.2.2-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.5-2.2-2.9-.2-.4 0-.6.1-.8.1-.1.4-.5.6-.7.2-.2.3-.4.5-.7.2-.3.1-.5 0-.7-.1-.2-1-2.4-1.4-3.2-.3-.8-.7-.7-1-.7h-.9c-.3 0-.7.1-1 .5-.3.4-1.4 1.4-1.4 3.4 0 2 1.5 3.9 1.7 4.2.2.3 2.9 4.5 7.1 6.3 1 .4 1.8.7 2.4.9 1 .3 1.9.3 2.6.2.8-.1 2.4-1 2.7-2 .3-1 .3-1.9.2-2-.1-.2-.4-.3-.8-.5z"/>
-    </svg>
-  </span>
-  <span class="text-sm font-semibold hidden md:block">Escribinos</span>
-</a>
+  <!-- BOTON FLOTANTE -->
+  <a
+    href="https://wa.me/5491163058087?text=Hola!%20Quiero%20hacer%20una%20consulta"
+    target="_blank"
+    title="Escribinos por WhatsApp"
+    class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition duration-300 animate-pulse"
+    aria-label="WhatsApp"
+  >
+    <span class="w-5 h-5">
+      <svg viewBox="0 0 32 32" fill="currentColor" class="w-full h-full">
+        <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.4c2.3 1.3 4.9 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.5 0-4.9-.7-7-2l-.5-.3-4.9 1.4 1.3-4.8-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.3 5.9-13.2 13.2-13.2S29.2 8.7 29.2 16 23.3 28.9 16 28.9zm7.3-9.8c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.5-.2.2-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.5-2.2-2.9-.2-.4 0-.6.1-.8.1-.1.4-.5.6-.7.2-.2.3-.4.5-.7.2-.3.1-.5 0-.7-.1-.2-1-2.4-1.4-3.2-.3-.8-.7-.7-1-.7h-.9c-.3 0-.7.1-1 .5-.3.4-1.4 1.4-1.4 3.4 0 2 1.5 3.9 1.7 4.2.2.3 2.9 4.5 7.1 6.3 1 .4 1.8.7 2.4.9 1 .3 1.9.3 2.6.2.8-.1 2.4-1 2.7-2 .3-1 .3-1.9.2-2-.1-.2-.4-.3-.8-.5z"/>
+      </svg>
+    </span>
+    <span class="text-sm font-semibold hidden md:block">Escribinos</span>
+  </a>
 
   <!-- FOOTER -->
   <footer class="border-t border-white/10 text-center py-6 text-sm text-zinc-500">
     © 2026 Bonzo Sim Racing
   </footer>
 
-      <!-- MODAL PRODUCTO -->
-<div id="productModal" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+  <!-- MODAL PRODUCTO -->
+  <div id="productModal" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl animate-fadeUp">
 
-  <div class="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl animate-fadeUp">
-
-    <!-- BOTON VOLVER -->
-    <button 
-      onclick="closeModal()" 
-      class="absolute top-4 left-4 z-50 bg-cyan-500 text-black w-12 h-12 rounded-xl flex items-center justify-center font-bold shadow-lg"
-    >
-      ←
-    </button>
-   <div class="grid md:grid-cols-2 gap-0">
-  <div class="p-4 md:p-6 border-b md:border-b-0 md:border-r border-white/10">
-    <img
-      id="modalMainImage"
-      src=""
-      alt=""
-      class="w-full h-[320px] md:h-[420px] object-contain rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.35)] transition duration-300 bg-black"
-    />
-
-    <div class="mt-4 flex items-center justify-between gap-4">
-      <div id="modalThumbs" class="grid grid-cols-4 gap-3 flex-1"></div>
-      <div
-        id="modalCounter"
-        class="text-xs md:text-sm text-zinc-400 whitespace-nowrap"
+      <!-- BOTON VOLVER -->
+      <button
+        onclick="closeModal()"
+        class="absolute top-4 left-4 z-50 bg-cyan-500 text-black w-12 h-12 rounded-xl flex items-center justify-center font-bold shadow-lg"
       >
-        1 / 1
+        ←
+      </button>
+
+      <div class="grid md:grid-cols-2 gap-0">
+        <div class="p-4 md:p-6 border-b md:border-b-0 md:border-r border-white/10">
+          <img
+            id="modalMainImage"
+            src=""
+            alt=""
+            class="w-full h-[320px] md:h-[420px] object-contain rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.35)] transition duration-300 bg-black"
+          />
+
+          <div class="mt-4 flex items-center justify-between gap-4">
+            <div id="modalThumbs" class="grid grid-cols-4 gap-3 flex-1"></div>
+            <div id="modalCounter" class="text-xs md:text-sm text-zinc-400 whitespace-nowrap">
+              1 / 1
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 md:p-8 flex flex-col">
+          <p id="modalBadge" class="text-cyan-400 text-sm font-semibold uppercase tracking-wider"></p>
+          <h3 id="modalTitle" class="mt-2 text-3xl md:text-4xl font-bold text-white tracking-wide"></h3>
+          <p id="modalDescription" class="mt-4 text-zinc-300 leading-7"></p>
+
+          <a
+            id="modalWhatsapp"
+            href="#"
+            target="_blank"
+            class="inline-flex mt-8 w-fit items-center justify-center bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] transition"
+          >
+            Consultar por WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="p-6 md:p-8 flex flex-col">
-    <p id="modalBadge" class="text-cyan-400 text-sm font-semibold uppercase tracking-wider"></p>
-    <h3 id="modalTitle" class="mt-2 text-3xl md:text-4xl font-bold text-white tracking-wide"></h3>
-    <p id="modalDescription" class="mt-4 text-zinc-300 leading-7"></p>
+  <script>
+    const productsData = {
+      gtneo: {
+        badge: "Volante",
+        title: "Simagic GT Neo",
+        description: "Volante GT premium con excelente terminación, gran ergonomía y una experiencia de manejo precisa.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20GT%20Neo",
+        images: ["Gt Neo.PNG", "gtneo3.png", "gtneo4.png", "gtneo5.png", "gtneo1.jpeg", "gtneo2.jpeg"]
+      },
+      fxpro: {
+        badge: "Volante",
+        title: "Simagic FX Pro",
+        description: "Volante premium orientado a fórmula, con diseño moderno, excelente grip y prestaciones avanzadas.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20FX%20Pro",
+        images: ["Fx PRO.PNG", "fxpro2.png", "fxpro.jpeg"]
+      },
+      p1000: {
+        badge: "Pedalera",
+        title: "Simagic P1000",
+        description: "Pedalera de alto rendimiento con gran precisión, ideal para mejorar frenado, consistencia y control.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P1000",
+        images: ["P-1000.PNG", "p1000-1.png", "p1000-2.png", "p1000.jpeg"]
+      },
+      p2000: {
+        badge: "Pedalera",
+        title: "Simagic P2000",
+        description: "Pedales hidráulicos premium para quienes buscan sensaciones más realistas y máxima performance.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P2000",
+        images: ["P-2000.PNG", "p2000-1.png", "p2000-2.png"]
+      },
+      alphaevo: {
+        badge: "Base Direct Drive",
+        title: "Simagic Alpha Evo Series",
+        description: "Bases Direct Drive con gran respuesta, fuerza y precisión para llevar tu experiencia al siguiente nivel.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
+        images: ["Alpha Evo sport 6.PNG", "alphaevo2.png", "alphaevo3.png", "alphaevo4.png", "alphaevo5.png", "evo.jpeg", "evosport.jpeg"]
+      },
+      neoxhub: {
+        badge: "Hub",
+        title: "Neo X Hub",
+        description: "Hub modular pensado para expandir funciones y mejorar la versatilidad de tu setup.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Neo%20X%20Hub",
+        images: ["Neo X Hub.PNG", "neoxhub1.png", "neoxhub2.png", "neoxhub3.png"]
+      },
+      shifterq1: {
+        badge: "Shifter",
+        title: "Simagic Q1 Sequential Shifter",
+        description: "Shifter secuencial pensado para sumar precisión, sensación mecánica y más realismo al manejo.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Simagic%20Q1%20Sequential%20Shifter",
+        images: ["Q1 Secuential Shifter.PNG", "shifter1.png", "shifter2.png"]
+      },
+      shifterds8x: {
+        badge: "Shifter",
+        title: "Simagic DS-8X Shifter",
+        description: "Shifter H-pattern y secuencial en un solo equipo. Máximo realismo y versatilidad.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Simagic%20DS-8X%20Shifter",
+        images: ["ds8.png", "ds81.png", "ds82.png"]
+      },
+      handbraketb1: {
+        badge: "Handbrake",
+        title: "Simagic TB-1 Handbrake",
+        description: "Handbrake ideal para sumar control y sensaciones más intensas en rally, drift y distintas disciplinas.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Simagic%20TB-1%20Handbrake",
+        images: ["TB-1 Handbrake.PNG"]
+      },
+      accesorios: {
+        badge: "Accesorios",
+        title: "Accesorios Simagic",
+        description: "Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20accesorios%20Simagic",
+        images: ["Maglink.PNG", "QRA.jpeg", "SideMount.jpeg"]
+      },
+      mozar9: {
+        badge: "Base Direct Drive",
+        title: "Moza R9",
+        description: "Base Direct Drive compacta con gran rendimiento y excelente relación precio-calidad.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Moza%20R9",
+        images: ["moza-r9.png"]
+      },
+      mozaks: {
+        badge: "Volante",
+        title: "Moza KS Wheel",
+        description: "Volante GT versátil, liviano y con excelente ergonomía para distintas categorías.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS",
+        images: ["moza-ks.png"]
+      },
+      mozabundler5: {
+        badge: "Bundle",
+        title: "Moza R5 Bundle",
+        description: "Bundle ideal para entrar al sim racing con una solución completa, compacta y lista para usar.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20R5%20Bundle",
+        images: ["bundle-r5.png", "bundle-r50.png", "bundle-r51.png"]
+      },
+      mozabundlefsr2r9: {
+        badge: "Bundle",
+        title: "Moza FSR2 + R9",
+        description: "Combo premium con base Direct Drive y volante fórmula para una experiencia de alto nivel.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20FSR2%20mas%20R9",
+        images: ["bundlefsr2r9.png"]
+      },
+      mozabundleksr9: {
+        badge: "Bundle",
+        title: "Moza KS + R9",
+        description: "Bundle GT muy equilibrado para quienes buscan rendimiento, ergonomía y gran relación precio-calidad.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS%20mas%20R9",
+        images: ["bundleksr9.png"]
+      },
+      mozar12: {
+        badge: "Base Direct Drive",
+        title: "Moza R12",
+        description: "Base Direct Drive de gran potencia y precisión para setups más exigentes.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20R12",
+        images: ["moza-r12.png", "moza-r121.png", "moza-r122.png"]
+      },
+      mozar21ultra: {
+        badge: "Base Direct Drive",
+        title: "Moza R21 Ultra",
+        description: "Base de máxima potencia para quienes buscan una experiencia Direct Drive extrema.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20R21%20Ultra",
+        images: ["moza-r21ultra.png", "moza-r21ultra2.png", "moza-r21ultra3.png", "moza-r21ultra4.png"]
+      },
+      mozafsr2: {
+        badge: "Volante",
+        title: "Moza FSR2",
+        description: "Volante fórmula premium con look moderno y funciones avanzadas para máxima inmersión.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20FSR2",
+        images: ["fsr2-1.png", "fsr2-2.png", "fsr2-3.png"]
+      },
+      mozagsv2p: {
+        badge: "Volante",
+        title: "Moza GS V2P",
+        description: "Volante GT premium con materiales de alta calidad y gran presencia visual.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20GS%20V2P",
+        images: ["moza-gsv2p.png", "moza-gsv2p1.png", "moza-gsv2p3.png", "moza-gsv2p4.png"]
+      },
+      mozakspro: {
+        badge: "Volante",
+        title: "Moza KS Pro",
+        description: "Versión más avanzada para quienes buscan un volante GT competitivo y muy completo.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS%20Pro",
+        images: ["moza-kspro.png", "moza-kspro1.png", "moza-kspro2.png", "moza-kspro3.png"]
+      },
+      mozacspro: {
+        badge: "Volante",
+        title: "Moza CS Pro",
+        description: "Volante robusto y versátil para quienes buscan una experiencia más tradicional y potente.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20CS%20Pro",
+        images: ["moza-cspro3.png", "moza-cspro.png", "moza-cspro1.png", "moza-cspro2.png"]
+      },
+      mozacsv2p: {
+        badge: "Volante",
+        title: "Moza CS V2P",
+        description: "Volante redondo con gran terminación y enfoque en realismo para distintas disciplinas.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20CS%20V2P",
+        images: ["moza-csv2p.png", "moza-csv2p1.png", "moza-csv2p2.png", "moza-csv2p3.png"]
+      },
+      mozasrp2: {
+        badge: "Pedales",
+        title: "Moza SRP2",
+        description: "Pedales ideales para setups de entrada y media gama, con muy buena relación precio-rendimiento.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20SRP2",
+        images: ["moza-srp2.png", "moza-srp21.png", "moza-srp23.png"]
+      },
+      mozacrp2: {
+        badge: "Pedales",
+        title: "Moza CRP2",
+        description: "Pedales premium para quienes buscan mayor precisión, mejor frenado y sensación más sólida.",
+        whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20CRP2",
+        images: ["moza-crp2.png", "moza-crp21.png", "moza-crp22.png", "moza-crp23.png", "moza-crp24.png"]
+      }
+    };
 
-    <a
-      id="modalWhatsapp"
-      href="#"
-      target="_blank"
-      class="inline-flex mt-8 w-fit items-center justify-center bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.45)] transition"
-    >
-      Consultar por WhatsApp
-    </a>
-  </div>
-</div>
-<script>
-  const productsData = {
-    gtneo: {
-      badge: "Volante",
-      title: "Simagic GT Neo",
-      description: "Volante GT premium con excelente terminación, gran ergonomía y una experiencia de manejo precisa.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20GT%20Neo",
-      images: ["Gt Neo.PNG", "gtneo3.png", "gtneo4.png", "gtneo5.png", "gtneo1.jpeg", "gtneo2.jpeg"]
-    },
-    fxpro: {
-      badge: "Volante",
-      title: "Simagic FX Pro",
-      description: "Volante premium orientado a fórmula, con diseño moderno, excelente grip y prestaciones avanzadas.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Simagic%20FX%20Pro",
-      images: ["Fx PRO.PNG", "fxpro2.png", "fxpro.jpeg"]
-    },
-    p1000: {
-      badge: "Pedalera",
-      title: "Simagic P1000",
-      description: "Pedalera de alto rendimiento con gran precisión, ideal para mejorar frenado, consistencia y control.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P1000",
-      images: ["P-1000.PNG", "p1000-1.png", "p1000-2.png", "p1000.jpeg"]
-    },
-    p2000: {
-      badge: "Pedalera",
-      title: "Simagic P2000",
-      description: "Pedales hidráulicos premium para quienes buscan sensaciones más realistas y máxima performance.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20P2000",
-      images: ["P-2000.PNG", "p2000-1.png", "p2000-2.png"]
-    },
-    alphaevo: {
-      badge: "Base Direct Drive",
-      title: "Simagic Alpha Evo Series",
-      description: "Bases Direct Drive con gran respuesta, fuerza y precisión para llevar tu experiencia al siguiente nivel.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20de%20la%20Simagic%20Alpha%20Evo",
-      images: ["Alpha Evo sport 6.PNG", "alphaevo2.png", "alphaevo3.png", "alphaevo4.png", "alphaevo5.png", "evo.jpeg", "evosport.jpeg"]
-    },
-    neoxhub: {
-      badge: "Hub",
-      title: "Neo X Hub",
-      description: "Hub modular pensado para expandir funciones y mejorar la versatilidad de tu setup.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20m%C3%A1s%20info%20del%20Neo%20X%20Hub",
-      images: ["Neo X Hub.PNG", "neoxhub1.png", "neoxhub2.png", "neoxhub3.png"]
-    },
-   shifterq1: {
-  badge: "Shifter",
-  title: "Simagic Q1 Sequential Shifter",
-  description: "Shifter secuencial pensado para sumar precisión, sensación mecánica y más realismo al manejo.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Simagic%20Q1%20Sequential%20Shifter",
-  images: ["Q1 Secuential Shifter.PNG", "shifter1.png", "shifter2.png"]
-   },
-    shifterds8x: {
-  badge: "Shifter",
-  title: "Simagic DS-8X Shifter",
-  description: "Shifter H-pattern y secuencial en un solo equipo. Máximo realismo y versatilidad.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Simagic%20DS-8X%20Shifter",
-  images: ["ds8.png", "ds81.png", "ds82.png"]
-},
-  handbraketb1: {
-  badge: "Handbrake",
-  title: "Simagic TB-1 Handbrake",
-  description: "Handbrake ideal para sumar control y sensaciones más intensas en rally, drift y distintas disciplinas.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Simagic%20TB-1%20Handbrake",
-  images: ["TB-1 Handbrake.PNG"]
-    },
-    accesorios: {
-      badge: "Accesorios",
-      title: "Accesorios Simagic",
-      description: "Accesorios originales para completar, mejorar y personalizar tu setup con terminación premium.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20accesorios%20Simagic",
-      images: ["Maglink.PNG", "QRA.jpeg", "SideMount.jpeg"]
-    },
-    mozar9: {
-      badge: "Base Direct Drive",
-      title: "Moza R9",
-      description: "Base Direct Drive compacta con gran rendimiento y excelente relación precio-calidad.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20de%20Moza%20R9",
-      images: ["moza-r9.png"]
-    },
-    mozaks: {
-      badge: "Volante",
-      title: "Moza KS Wheel",
-      description: "Volante GT versátil, liviano y con excelente ergonomía para distintas categorías.",
-      whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS",
-      images: ["moza-ks.png"]
-    },
-    mozabundler5: {
-  badge: "Bundle",
-  title: "Moza R5 Bundle",
-  description: "Bundle ideal para entrar al sim racing con una solución completa, compacta y lista para usar.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20R5%20Bundle",
-  images: ["bundle-r5.png", "bundle-r50.png", "bundle-r51.png"]
-},
-mozabundlefsr2r9: {
-  badge: "Bundle",
-  title: "Moza FSR2 + R9",
-  description: "Combo premium con base Direct Drive y volante fórmula para una experiencia de alto nivel.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20FSR2%20mas%20R9",
-  images: ["bundlefsr2r9.png"]
-},
-mozabundleksr9: {
-  badge: "Bundle",
-  title: "Moza KS + R9",
-  description: "Bundle GT muy equilibrado para quienes buscan rendimiento, ergonomía y gran relación precio-calidad.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS%20mas%20R9",
-  images: ["bundleksr9.png"]
-},
-mozar12: {
-  badge: "Base Direct Drive",
-  title: "Moza R12",
-  description: "Base Direct Drive de gran potencia y precisión para setups más exigentes.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20R12",
-  images: ["moza-r12.png", "moza-r121.png", "moza-r122.png"]
-},
-mozar21ultra: {
-  badge: "Base Direct Drive",
-  title: "Moza R21 Ultra",
-  description: "Base de máxima potencia para quienes buscan una experiencia Direct Drive extrema.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20R21%20Ultra",
-  images: ["moza-r21ultra.png", "moza-r21ultra2.png", "moza-r21ultra3.png", "moza-r21ultra4.png"]
-},
-mozafsr2: {
-  badge: "Volante",
-  title: "Moza FSR2",
-  description: "Volante fórmula premium con look moderno y funciones avanzadas para máxima inmersión.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20FSR2",
-  images: ["fsr2-1.png", "fsr2-2.png", "fsr2-3.png"]
-},
-mozagsv2p: {
-  badge: "Volante",
-  title: "Moza GS V2P",
-  description: "Volante GT premium con materiales de alta calidad y gran presencia visual.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20GS%20V2P",
-  images: ["moza-gsv2p.png", "moza-gsv2p1.png", "moza-gsv2p3.png", "moza-gsv2p4.png"]
-},
-mozakspro: {
-  badge: "Volante",
-  title: "Moza KS Pro",
-  description: "Versión más avanzada para quienes buscan un volante GT competitivo y muy completo.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20KS%20Pro",
-  images: ["moza-kspro.png", "moza-kspro1.png", "moza-kspro2.png", "moza-kspro3.png"]
-},
-mozacspro: {
-  badge: "Volante",
-  title: "Moza CS Pro",
-  description: "Volante robusto y versátil para quienes buscan una experiencia más tradicional y potente.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20CS%20Pro",
-  images: ["moza-cspro3.png", "moza-cspro.png", "moza-cspro1.png", "moza-cspro2.png"]
-},
-mozacsv2p: {
-  badge: "Volante",
-  title: "Moza CS V2P",
-  description: "Volante redondo con gran terminación y enfoque en realismo para distintas disciplinas.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20CS%20V2P",
-  images: ["moza-csv2p.png", "moza-csv2p1.png", "moza-csv2p2.png", "moza-csv2p3.png"]
-},
-mozasrp2: {
-  badge: "Pedales",
-  title: "Moza SRP2",
-  description: "Pedales ideales para setups de entrada y media gama, con muy buena relación precio-rendimiento.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20SRP2",
-  images: ["moza-srp2.png", "moza-srp21.png", "moza-srp23.png"]
-},
-mozacrp2: {
-  badge: "Pedales",
-  title: "Moza CRP2",
-  description: "Pedales premium para quienes buscan mayor precisión, mejor frenado y sensación más sólida.",
-  whatsapp: "https://wa.me/5491163058087?text=Hola!%20Quiero%20info%20del%20Moza%20CRP2",
-  images: ["moza-crp2.png", "moza-crp21.png", "moza-crp22.png", "moza-crp23.png", "moza-crp24.png"]
-},
-  };
+    let currentProductKey = null;
+    let currentImageIndex = 0;
 
-  let currentProductKey = null;
-  let currentImageIndex = 0;
+    function updateMainImage(product, index) {
+      const mainImage = document.getElementById("modalMainImage");
+      const counter = document.getElementById("modalCounter");
 
-  function updateMainImage(product, index) {
-    const mainImage = document.getElementById("modalMainImage");
-    const counter = document.getElementById("modalCounter");
+      if (!mainImage) return;
 
-    if (!mainImage) return;
+      currentImageIndex = index;
+      mainImage.src = product.images[index];
+      mainImage.alt = product.title;
 
-    currentImageIndex = index;
-    mainImage.src = product.images[index];
-    mainImage.alt = product.title;
-
-    if (counter) {
-      counter.textContent = `${index + 1} / ${product.images.length}`;
-    }
-  }
-
-  function openModal(productKey) {
-    const product = productsData[productKey];
-    if (!product) return;
-
-    currentProductKey = productKey;
-    currentImageIndex = 0;
-
-    const modalBadge = document.getElementById("modalBadge");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalDescription = document.getElementById("modalDescription");
-    const modalWhatsapp = document.getElementById("modalWhatsapp");
-    const thumbs = document.getElementById("modalThumbs");
-    const modal = document.getElementById("productModal");
-
-    if (!modal || !thumbs || !modalBadge || !modalTitle || !modalDescription || !modalWhatsapp) return;
-
-    modalBadge.textContent = product.badge;
-    modalTitle.textContent = product.title;
-    modalDescription.textContent = product.description;
-    modalWhatsapp.href = product.whatsapp;
-
-    updateMainImage(product, 0);
-
-    thumbs.innerHTML = "";
-
-    product.images.forEach((img, index) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
-      button.innerHTML = `<img src="${img}" class="w-full h-20 object-contain bg-black" alt="${product.title}">`;
-      button.addEventListener("click", () => updateMainImage(product, index));
-      thumbs.appendChild(button);
-    });
-
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
-    document.body.classList.add("overflow-hidden");
-  }
-
-  function closeModal() {
-    const modal = document.getElementById("productModal");
-    if (!modal) return;
-
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.classList.remove("overflow-hidden");
-  }
- 
-  function showBrand(brand) {
-  const simagic = document.getElementById("simagicSection");
-  const moza = document.getElementById("mozaSection");
-
-  const btnSimagic = document.getElementById("btnSimagic");
-  const btnMoza = document.getElementById("btnMoza");
-
-  if (brand === "simagic") {
-    // salida moza
-    moza.classList.add("opacity-0", "translate-y-6");
-
-    setTimeout(() => {
-      moza.classList.add("hidden");
-
-      simagic.classList.remove("hidden");
-
-      setTimeout(() => {
-        simagic.classList.remove("opacity-0", "translate-y-6");
-        simagic.classList.add("opacity-100", "translate-y-0");
-      }, 50);
-    }, 200);
-
-    // botón
-    btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnSimagic.classList.remove("opacity-60");
-
-    btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnMoza.classList.add("opacity-60");
-  }
-
-  if (brand === "moza") {
-    // salida simagic
-    simagic.classList.add("opacity-0", "translate-y-6");
-
-    setTimeout(() => {
-      simagic.classList.add("hidden");
-
-      moza.classList.remove("hidden");
-
-      setTimeout(() => {
-        moza.classList.remove("opacity-0", "translate-y-6");
-        moza.classList.add("opacity-100", "translate-y-0");
-      }, 50);
-    }, 200);
-
-    // botón
-    btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnMoza.classList.remove("opacity-60");
-
-    btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
-    btnSimagic.classList.add("opacity-60");
-  }
-}
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("productModal");
-
-    if (modal) {
-      modal.addEventListener("click", function (e) {
-        if (e.target === this) {
-          closeModal();
-        }
-      });
+      if (counter) {
+        counter.textContent = `${index + 1} / ${product.images.length}`;
+      }
     }
 
-    showBrand("simagic");
-  });
-
-  document.addEventListener("keydown", function (e) {
-    const modal = document.getElementById("productModal");
-    if (!modal) return;
-
-    const isOpen = modal.classList.contains("flex");
-    if (!isOpen) return;
-
-    if (e.key === "Escape") {
-      closeModal();
-    }
-
-    if (currentProductKey && (e.key === "ArrowRight" || e.key === "ArrowLeft")) {
-      const product = productsData[currentProductKey];
+    function openModal(productKey) {
+      const product = productsData[productKey];
       if (!product) return;
 
-      if (e.key === "ArrowRight") {
-        currentImageIndex = (currentImageIndex + 1) % product.images.length;
+      currentProductKey = productKey;
+      currentImageIndex = 0;
+
+      const modalBadge = document.getElementById("modalBadge");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.getElementById("modalDescription");
+      const modalWhatsapp = document.getElementById("modalWhatsapp");
+      const thumbs = document.getElementById("modalThumbs");
+      const modal = document.getElementById("productModal");
+
+      if (!modal || !thumbs || !modalBadge || !modalTitle || !modalDescription || !modalWhatsapp) return;
+
+      modalBadge.textContent = product.badge;
+      modalTitle.textContent = product.title;
+      modalDescription.textContent = product.description;
+      modalWhatsapp.href = product.whatsapp;
+
+      updateMainImage(product, 0);
+
+      thumbs.innerHTML = "";
+
+      product.images.forEach((img, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "rounded-lg overflow-hidden border border-white/10 hover:border-cyan-400/50 hover:scale-[1.03] transition";
+        button.innerHTML = `<img src="${img}" class="w-full h-20 object-contain bg-black" alt="${product.title}">`;
+        button.addEventListener("click", () => updateMainImage(product, index));
+        thumbs.appendChild(button);
+      });
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("productModal");
+      if (!modal) return;
+
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    function showBrand(brand) {
+      const simagic = document.getElementById("simagicSection");
+      const moza = document.getElementById("mozaSection");
+
+      const btnSimagic = document.getElementById("btnSimagic");
+      const btnMoza = document.getElementById("btnMoza");
+
+      if (brand === "simagic") {
+        moza.classList.add("opacity-0", "translate-y-6");
+
+        setTimeout(() => {
+          moza.classList.add("hidden");
+          simagic.classList.remove("hidden");
+
+          setTimeout(() => {
+            simagic.classList.remove("opacity-0", "translate-y-6");
+            simagic.classList.add("opacity-100", "translate-y-0");
+          }, 50);
+        }, 200);
+
+        btnSimagic.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+        btnSimagic.classList.remove("opacity-60");
+
+        btnMoza.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+        btnMoza.classList.add("opacity-60");
       }
 
-      if (e.key === "ArrowLeft") {
-        currentImageIndex = (currentImageIndex - 1 + product.images.length) % product.images.length;
+      if (brand === "moza") {
+        simagic.classList.add("opacity-0", "translate-y-6");
+
+        setTimeout(() => {
+          simagic.classList.add("hidden");
+          moza.classList.remove("hidden");
+
+          setTimeout(() => {
+            moza.classList.remove("opacity-0", "translate-y-6");
+            moza.classList.add("opacity-100", "translate-y-0");
+          }, 50);
+        }, 200);
+
+        btnMoza.classList.add("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+        btnMoza.classList.remove("opacity-60");
+
+        btnSimagic.classList.remove("border-cyan-400/30", "shadow-[0_0_25px_rgba(34,211,238,0.25)]");
+        btnSimagic.classList.add("opacity-60");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("productModal");
+
+      if (modal) {
+        modal.addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
       }
 
-      updateMainImage(product, currentImageIndex);
-    }
-  });
-</script>
-    <script>
-  (function () {
-    const ua = navigator.userAgent;
+      showBrand("simagic");
+    });
 
-    const isChromeDesktop =
-      /Chrome/.test(ua) &&
-      !/Edg|OPR|CriOS|Android/.test(ua) &&
-      window.innerWidth >= 1024;
+    document.addEventListener("keydown", function (e) {
+      const modal = document.getElementById("productModal");
+      if (!modal) return;
 
-    const heroVideo = document.getElementById("heroVideo");
-    const heroFallback = document.getElementById("heroFallback");
+      const isOpen = modal.classList.contains("flex");
+      if (!isOpen) return;
 
-    if (!heroVideo || !heroFallback) return;
+      if (e.key === "Escape") {
+        closeModal();
+      }
 
-    if (!isChromeDesktop) {
-      heroVideo.classList.remove("hidden");
-      heroFallback.classList.add("hidden");
-    }
-  })();
-</script>
+      if (currentProductKey && (e.key === "ArrowRight" || e.key === "ArrowLeft")) {
+        const product = productsData[currentProductKey];
+        if (!product) return;
+
+        if (e.key === "ArrowRight") {
+          currentImageIndex = (currentImageIndex + 1) % product.images.length;
+        }
+
+        if (e.key === "ArrowLeft") {
+          currentImageIndex = (currentImageIndex - 1 + product.images.length) % product.images.length;
+        }
+
+        updateMainImage(product, currentImageIndex);
+      }
+    });
+  </script>
+
+  <script>
+    (function () {
+      const ua = navigator.userAgent;
+
+      const isChromeDesktop =
+        /Chrome/.test(ua) &&
+        !/Edg|OPR|CriOS|Android/.test(ua) &&
+        window.innerWidth >= 1024;
+
+      const heroVideo = document.getElementById("heroVideo");
+      const heroFallback = document.getElementById("heroFallback");
+
+      if (!heroVideo || !heroFallback) return;
+
+      if (!isChromeDesktop) {
+        heroVideo.classList.remove("hidden");
+        heroFallback.classList.add("hidden");
+      }
+    })();
+  </script>
+</body>
+</html>
